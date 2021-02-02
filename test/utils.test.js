@@ -22,7 +22,7 @@ const userTest = {
     ]
 };
 
-test('this fuction should take 3 numbers in and return their sum', (expect) => {
+test('this grabSum fuction should take 3 numbers in and return their sum', (expect) => {
     //Arrange
     const numOne = userTest.dinoArray[0].tRexPercent;
     const numTwo = userTest.dinoArray[0].triceratopsPercent;
@@ -40,7 +40,10 @@ test('this fuction should take 3 numbers in and return their sum', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this fuction takes in an id and an array and returns the corresponding object with that id in the array', (expect) => {
+
+
+
+test('this findById fuction takes in an id and an array and returns the corresponding object with that id in the array', (expect) => {
     //Arrange
     const headOptions = [
 
@@ -76,6 +79,6 @@ test('this fuction takes in an id and an array and returns the corresponding obj
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
 
