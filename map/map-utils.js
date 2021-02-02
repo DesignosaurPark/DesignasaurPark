@@ -14,3 +14,4 @@ export function renderPosition(user, ul) {
 
     ul.append(dot);
 }
+

@@ -17,3 +17,12 @@ export function findById(id, array) {
 export function getRandomCoordinate() {
     return Math.ceil(Math.random * 100);
 }
+
+export function findByDinoId(dinoId, array) {
+    for (let item of array) {
+        if (item.dinoId === dinoId) {
+            return item;
+        }
+    }
+}
+
