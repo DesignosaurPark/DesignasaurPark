@@ -12,12 +12,38 @@
 
 <body>
     <header>
-        <img src="./assets/headingImg.jpg" alt="heading logo">
+        <img src="../assets/headingImg.jpg" alt="heading logo">
     </header>
     <main>
-        <section class="main-section">
-            <p>Home page</p>
+        <section class="user-in">User Name:
+            <input id="user-name">
         </section>
+        <section>
+            <div id="dino-range-1">
+                <label for="dnaTRex">Tyrannosaurus Rex DNA %</label>
+                <input type="range" id="dnaTRex" name="points" min="0" max="100">
+            </div>
+            <div id="dino-range-2">
+                <label for="dnaTricera">Triceratops DNA %</label>
+                <input type="range" id="dnaTricera" name="points" min="0" max="100">
+            </div>
+            <div id="dino-range-3">
+                <label for="dnaPtero">Pterodactyl DNA %</label>
+                <input type="range" id="dnaPtero" name="points" min="0" max="100">
+            </div>
+            <span id="error message">You have exceeded max DNA levels!</span>
+        </section>
+        <section id="feedback">
+            <div id="dna-tracker">
+                <span>75% DNA resources used.</span>
+            </div>
+            <div id="egg-graphic">Egg goes here
+                <img src="">
+            </div>
+            <section class="dino-in">Dinosaur Name:
+                <input id="dino-name">
+                <button id="incubate">Incubate it</button>
+            </section>
     </main>
     <script type="module" src="app.js"></script>
 </body>
