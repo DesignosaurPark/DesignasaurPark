@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { setUser } from '../local-storage-utils.js';
+import { setUser, getUser } from '../local-storage-utils.js';
 
 const test = QUnit.test;
 
@@ -35,3 +35,21 @@ test('setUser should push a user object into local storage', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('getUser should pull a user object from local storage', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = userTest;
+    
+
+    setUser(userTest);
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = getUser();
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
+

@@ -6,3 +6,9 @@ export function setUser(user) {
 
     return stringyUser;
 }
+
+export function getUser() {
+    const user = JSON.parse(localStorage.getItem(USER));
+
+    return user;
+}
