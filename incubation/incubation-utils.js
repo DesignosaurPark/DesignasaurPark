@@ -23,3 +23,23 @@ export function renderDinosaur(resultsArr) {
 
     return dinoContainer;
 }
+
+
+export function stackRankTotals(user) {
+
+
+
+    const tRex = user.dinoArray[dinoArray.length - 1].tRexPercent;
+    const triceratops = user.dinoArray[dinoArray.length - 1].triceratopsPercent;
+    const pterodactyl = user.dinoArray[dinoArray.length - 1].pterodactylPercent;
+
+
+
+    //first comparison checks to see which is highest
+    //"if tRex is highest, return tRexHead...else"
+
+    const maxPercent = Math.max
+
+
+
+}
