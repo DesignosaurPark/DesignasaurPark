@@ -1,5 +1,5 @@
 
-import { grabSum, findById } from '../utils.js';
+import { grabSum, findById, findByDinoId } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -81,4 +81,34 @@ test('this findById fuction takes in an id and an array and returns the correspo
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
+
+
+test('this findByDinoId fuction takes in a dinoId and an array and returns the corresponding object with that id in the array', (expect) => {
+    //Arrange
+
+
+    // Set up your arguments and expectations
+    const expected = {
+        dinoId: 1,
+        species: 'Raptor',
+        tRexPercent: 70,
+        triceratopsPercent: 20,
+        pterodactylPercent: 10,
+        name: 'Betty',
+        description: 'This is an angry dinosaur.',
+        img: 'headingImg.jpg',
+        top: 35,
+        left: 40,
+    };
+    console.log(userTest.dinoArray);
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findByDinoId(1, userTest.dinoArray);
+
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
 

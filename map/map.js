@@ -1,4 +1,4 @@
-import { renderPosition } from './map-utils.js';
+import { renderPosition, renderTechnicalInfo } from './map-utils.js';
 
 const userTest = {
 
@@ -23,3 +23,6 @@ const ul = document.getElementById('map-list');
 renderPosition(userTest, ul);
 
 console.log();
+
+renderTechnicalInfo(userTest, 1);
+
