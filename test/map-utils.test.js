@@ -34,5 +34,5 @@ test('renderTechnicalInfo should take in a user and an id, and render 4 spans fo
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual.outerHTML, expected);
 });

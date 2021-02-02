@@ -37,5 +37,5 @@ export function renderTechnicalInfo(user, dinoId) {
 
     div.append(dinoName, dinoSpecies, dinoCoordinates, dinoDescription);
 
-    return div.outerHTML;
+    return div;
 }
