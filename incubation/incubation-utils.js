@@ -23,3 +23,84 @@ export function renderDinosaur(resultsArr) {
 
     return dinoContainer;
 }
+
+
+export function stackRankTotals(user) {
+
+    const dinoObject = user.dinoArray[user.dinoArray.length - 1];
+
+    const tRex = dinoObject.tRexPercent;
+    const triceratops = dinoObject.triceratopsPercent;
+    const pterodactyl = dinoObject.pterodactylPercent;
+
+    //const percentageArray = [tRex, triceratops, pterodactyl];
+
+
+
+    //first comparison checks to see which is highest
+    //"if tRex is highest, return tRexHead...else"
+
+    const maxPercent = Math.max(tRex, triceratops, pterodactyl);
+    console.log(maxPercent);
+    let maxObjectKey = getKeyByValue(dinoObject, maxPercent);
+    console.log(maxObjectKey);
+
+    const minPercent = Math.min(tRex, triceratops, pterodactyl);
+    let minObjectKey = getKeyByValue(dinoObject, minPercent);
+    console.log(minObjectKey);
+
+    const midPercent = (tRex + triceratops + pterodactyl) - minPercent - maxPercent;
+    let midObjectKey = getKeyByValue(dinoObject, midPercent);
+    console.log(midObjectKey);
+
+    let dinoBodyArray = [];
+
+    //determining the head id:
+    if (dinoObject[maxObjectKey] === tRex) {
+        dinoBodyArray.push('tRexHead');
+    }
+    if (dinoObject[maxObjectKey] === triceratops) {
+        dinoBodyArray.push('triceratopsHead');
+    }
+    if (dinoObject[maxObjectKey] === pterodactyl) {
+        dinoBodyArray.push('pterodactylHead');
+    }
+
+    //determining the torso id:
+    if (dinoObject[midObjectKey] === tRex) {
+        dinoBodyArray.push('tRexTorso');
+    }
+    if (dinoObject[midObjectKey] === triceratops) {
+        dinoBodyArray.push('triceratopsTorso');
+    }
+    if (dinoObject[midObjectKey] === pterodactyl) {
+        dinoBodyArray.push('pterodactylTorso');
+    }
+
+    //determining the legs id:
+    if (dinoObject[minObjectKey] === tRex) {
+        dinoBodyArray.push('tRexLegs');
+    }
+    if (dinoObject[minObjectKey] === triceratops) {
+        dinoBodyArray.push('triceratopsLegs');
+    }
+    if (dinoObject[minObjectKey] === pterodactyl) {
+        dinoBodyArray.push('pterodactylLegs');
+    }
+
+
+
+
+
+    console.log(dinoBodyArray);
+    return dinoBodyArray;
+
+
+}
+
+
+function getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
+}
+
+//global object has a method called "keys" -- Object = object constructor
