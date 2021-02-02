@@ -13,3 +13,7 @@ export function findById(id, array) {
         }
     }
 }
+
+export function getRandomCoordinate() {
+    return Math.ceil(Math.random * 100);
+}
