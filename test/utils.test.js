@@ -24,14 +24,16 @@ const userTest = {
 
 test('this fuction should take 3 numbers in and return their sum', (expect) => {
     //Arrange
-
+    const numOne = userTest.dinoArray[0].tRexPercent;
+    const numTwo = userTest.dinoArray[0].triceratopsPercent;
+    const numThree = userTest.dinoArray[0].pterodactylPercent;
 
     // Set up your arguments and expectations
     const expected = 100;
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = grabSum(userTest);
+    const actual = grabSum(numOne, numTwo, numThree);
 
     //Expect
     // Make assertions about what is expected versus the actual result
