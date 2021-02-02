@@ -26,7 +26,7 @@ const userTest = {
 test('the renderDinosaur function, when given user, return div with dino images and description', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div><img src="../assets/tRexHeadImg.png"><img src="../assets/triceratopsTorsoImg.png"><img src="../assets/pterodactylLegsImg.png"><p>Your Dinosaur is an an angry fellow. They are an herbivore. They can reach speeds up to 48 mph.</p></div>`;
+    const expected = `<div><img src="../assets/tRexHeadImg.png"><img src="../assets/triceratopsTorsoImg.png"><img src="../assets/pterodactylLegsImg.png"><p>Your Dinosaur is an angry fellow. They are an herbivore. They can reach speeds up to 48 mph.</p></div>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
