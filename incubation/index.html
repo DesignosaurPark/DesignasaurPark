@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Welcome to Designasaur Park!</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Designasaur Park Incubation Page</title>
 </head>
 
 <body>
     <header>
-        <img src="./assets/headingImg.jpg" alt="heading logo">
+        <img src="../assets/headingImg.jpg" alt="heading logo">
     </header>
     <main>
         <section class="main-section">
             <p>Incubation Page</p>
-
             <div id = "dino-container">
-                <p>Your Dinosaur is an angry fellow. They are a scavenger. They can reach speeds up to 12 mph.</p>
-                <img src="../assets/tRexHeadImg.png">
-                <img src="../assets/pterodactylBodyImg.png">
-                <img src="../assets/triceratopsFeetImg.png">
+                <img id='egg1-pic' src=''>
+                <img id='egg2-pic' src=''>
             </div>
+            <label>Enter your dinosaur's species name:</label>
+            <input type='text'>
+            <button id='release-button'>Release into Park</button>
         </section>
     </main>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./incubation.js"></script>
 </body>
 
 </html>
