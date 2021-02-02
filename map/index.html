@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/map.css">
-    <title>Welcome to Designasaur Park!</title>
+    <title>Welcome to the Disignasaur park map!</title>
 </head>
 
 <body>
@@ -23,12 +23,19 @@
 
                 </ul>
             </div>
-            <div id="technical-info">
-                <span>Betty</span>
-                <span>Raptor</span>
-                <span>35 N, 40 W</span>
-                <span>This is an angry dinosaur.</span>
+            <div id = 'info-area-container'>
+                <!-- grab this in map.js and append our return value from renderInformation to it-->
             </div>
+            <div id = 'notes container'>
+                <!-- in p'Notes' is temporary and will be replaced with '${user.name}'s notes'-->
+                <p id = 'user-notes-name'>Notes</p>
+                <textarea name="notes" id="user-notes" cols="30" rows="10"></textarea>
+            </div>
+            <div class = 'button-container'>
+                <button>Advance day?</button>
+                <button>Create another?</button>
+            </div>
+        <!-- info container div will be put here in map.js-->    
         </section>
     </main>
     <script type="module" src="map.js"></script>
