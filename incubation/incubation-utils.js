@@ -1,12 +1,15 @@
-export function renderDinosaur(resultsArr) {
+import data from '../dinoData.js';
+import { findById } from '../utils.js';
+
+export function renderDinosaur(dinoPartIdArray) {
     // create array to hold our dino data descriptions for each piece
     let descriptionPieceArr = [];
 
     const dinoContainer = document.createElement('div');
 
     // loop through each result id, grab corresponding data obj. push obj.description to description Piece array, create and append img with obj.img as source.
-    for (let result of resultsArr) {
-        const DinoDataObj = findById(result);
+    for (let id of dinoPartIdArray) {
+        const DinoDataObj = findById(id, data);
         descriptionPieceArr.push(DinoDataObj.description);
         const dinoImg = document.createElement('img');
         dinoImg.src = `../assets/${DinoDataObj.img}`;
@@ -15,13 +18,13 @@ export function renderDinosaur(resultsArr) {
 
     const dinoDescription = document.createElement('p');
 
-    const message = `Your Dinosaur is an ${descriptionPieceArr[0]} fellow. They are ${descriptionPieceArr[1]}. They can reach speeds up to ${descriptionPieceArr[2]}.`;
+    const message = `Your Dinosaur is ${descriptionPieceArr[0]} fellow. They are ${descriptionPieceArr[1]}. They can reach speeds up to ${descriptionPieceArr[2]}.`;
 
     dinoDescription.textContent = message;
 
     dinoContainer.append(dinoDescription);
 
-    return dinoContainer;
+    return dinoContainer.outerHTML;
 }
 
 

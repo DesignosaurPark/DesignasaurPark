@@ -26,11 +26,12 @@ const userTest = {
 test('the renderDinosaur function, when given user, return div with dino images and description', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div id="dino-container"><p>Your Dinosaur is an angry fellow. They are a scavenger. They can reach speeds up to 12 mph.</p><img src="../assets/tRexHeadImg.png"><img src="../assets/pterodactylBodyImg.png"><img src="../assets/triceratopsFeetImg.png"></div>`;
+    const expected = `<div><img src="../assets/tRexHeadImg.png"><img src="../assets/triceratopsTorsoImg.png"><img src="../assets/pterodactylLegsImg.png"><p>Your Dinosaur is an an angry fellow. They are an herbivore. They can reach speeds up to 48 mph.</p></div>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderDinosaur(userTest.dinoArray[0]);
+    const stackedRankArr = stackRankTotals(userTest);
+    const actual = renderDinosaur(stackedRankArr);
 
     //Expect
     // Make assertions about what is expected versus the actual result

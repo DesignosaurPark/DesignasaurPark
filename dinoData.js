@@ -1,70 +1,59 @@
-const data = {
+const data = [
 
-    headOptions: [
+    {
+        id: 'tRexHead',
+        description: 'an angry',
+        img: 'tRexHeadImg.png',
+    },
 
-        {
-            id: 'tRexHead',
-            description: 'angry',
-            img: 'tRexHeadImg.png',
-        },
+    {
+        id: 'triceratopsHead',
+        description: 'a peaceful',
+        img: 'triceratopsHeadImg.png',
+    },
 
-        {
-            id: 'triceratopsHead',
-            description: 'peaceful',
-            img: 'triceratopsHeadImg.png',
-        },
+    {
+        id: 'pterodactylHead',
+        description: 'a whimsical',
+        img: 'pterodactylHeadImg.png',
+    },
 
-        {
-            id: 'pterodactylHead',
-            description: 'whimsical',
-            img: 'pterodactylHeadImg.png',
-        }
-    ],
+    {
+        id: 'tRexTorso',
+        description: 'a carnivore',
+        img: 'tRexTorsoImg.png',
+    },
 
-    torsoOptions: [
+    {
+        id: 'triceratopsTorso',
+        description: 'an herbivore',
+        img: 'triceratopsTorsoImg.png',
+    },
 
-        {
-            id: 'tRexTorso',
-            description: 'a carnivore',
-            img: 'tRexTorsoImg.png',
-        },
+    {
+        id: 'pterodactylTorso',
+        description: 'a scavenger',
+        img: 'pterodactylTorsoImg.png',
+    },
 
-        {
-            id: 'triceratopsTorso',
-            description: 'an herbivore',
-            img: 'triceratopsTorsoImg.png',
-        },
+    {
+        id: 'tRexLegs',
+        description: '35 mph',
+        img: 'tRexLegsImg.png',
+    },
 
-        {
-            id: 'pterodactylTorso',
-            description: 'a scavenger',
-            img: 'pterodactylTorsoImg.png',
-        }
-    ],
+    {
+        id: 'triceratopsLegs',
+        description: '12 mph',
+        img: 'triceratopsLegsImg.png',
+    },
 
-
-    legsOptions: [
-
-        {
-            id: 'tRexLegs',
-            description: '35 mph',
-            img: 'tRexLegsImg.png',
-        },
-
-        {
-            id: 'triceratopsLegs',
-            description: '12 mph',
-            img: 'triceratopsLegsImg.png',
-        },
-
-        {
-            id: 'pterodactylLegs',
-            description: '48 mph',
-            img: 'pterodactylLegsImg.png',
-        }
-    ]
-};
-
+    {
+        id: 'pterodactylLegs',
+        description: '48 mph',
+        img: 'pterodactylLegsImg.png',
+    },
+];
 
 export default data;
 
