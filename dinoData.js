@@ -5,19 +5,19 @@ const data = {
         {
             id: 'tRexHead',
             description: 'angry',
-            img: 'tRexHeadImg',
+            img: 'tRexHeadImg.png',
         },
 
         {
             id: 'triceratopsHead',
             description: 'peaceful',
-            img: 'triceratopsHeadImg',
+            img: 'triceratopsHeadImg.png',
         },
 
         {
             id: 'pterodactylHead',
             description: 'whimsical',
-            img: 'pterodactylHeadImg',
+            img: 'pterodactylHeadImg.png',
         }
     ],
 
@@ -26,19 +26,19 @@ const data = {
         {
             id: 'tRexTorso',
             description: 'a carnivore',
-            img: 'tRexTorsoImg',
+            img: 'tRexTorsoImg.png',
         },
 
         {
             id: 'triceratopsTorso',
             description: 'an herbivore',
-            img: 'triceratopsTorsoImg',
+            img: 'triceratopsTorsoImg.png',
         },
 
         {
             id: 'pterodactylTorso',
             description: 'a scavenger',
-            img: 'pterodactylTorsoImg',
+            img: 'pterodactylTorsoImg.png',
         }
     ],
 
@@ -48,19 +48,19 @@ const data = {
         {
             id: 'tRexLegs',
             description: '35 mph',
-            img: 'tRexLegsImg',
+            img: 'tRexLegsImg.png',
         },
 
         {
             id: 'triceratopsLegs',
             description: '12 mph',
-            img: 'triceratopsLegsImg',
+            img: 'triceratopsLegsImg.png',
         },
 
         {
             id: 'pterodactylLegs',
             description: '48 mph',
-            img: 'pterodactylLegsImg',
+            img: 'pterodactylLegsImg.png',
         }
     ]
 };
