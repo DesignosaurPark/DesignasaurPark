@@ -1,5 +1,5 @@
 
-import { grabSum } from '../utils.js';
+import { grabSum, findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -39,3 +39,43 @@ test('this fuction should take 3 numbers in and return their sum', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('this fuction takes in an id and an array and returns the corresponding object with that id in the array', (expect) => {
+    //Arrange
+    const headOptions = [
+
+        {
+            id: 'tRexHead',
+            description: 'angry',
+            img: 'tRexHeadImg.png',
+        },
+
+        {
+            id: 'triceratopsHead',
+            description: 'peaceful',
+            img: 'triceratopsHeadImg.png',
+        },
+
+        {
+            id: 'pterodactylHead',
+            description: 'whimsical',
+            img: 'pterodactylHeadImg.png',
+        }
+    ];
+
+    // Set up your arguments and expectations
+    const expected = {
+        id: 'tRexHead',
+        description: 'angry',
+        img: 'tRexHeadImg.png',
+    };
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById('tRexHead', headOptions);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
