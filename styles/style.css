@@ -21,7 +21,7 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     background-color: var(--color2);
 }
 
@@ -49,18 +49,22 @@ section {
 }
 
 header {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 500fr 1fr;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
-    display: relative;
 }
 
 header img {
     transform: scale(1.5);
-    margin-top: 25px;
-    display: absolute;
+    margin-top: 50px;
+    justify-self: center;
+}
+
+header a {
+    overflow: visible;
+    align-self: flex-end;
 }
 
 footer {
@@ -126,4 +130,8 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  #lab-button{
+      
   }
