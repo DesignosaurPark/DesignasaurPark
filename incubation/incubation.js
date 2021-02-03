@@ -34,7 +34,7 @@ eggImg.addEventListener('click', () => {
     } else if (eggCounter === 2) {
 
         //egg replaced with dino image
-        eggImg.src = '../assets/e-flask_small.png';
+        eggImg.style.display = 'none';
 
         //test user until localStorage is online:
         const userTest = {
@@ -57,24 +57,12 @@ eggImg.addEventListener('click', () => {
         };
 
         const dinoBodyMix = stackRankTotals(userTest);
-        console.log(dinoBodyMix);
-        // const dinoBodyMix = [
-        //     'tRexHead',
-        //     'triceratopsTorso',
-        //     'pterodactylLegs'
-        // ];
 
         const dinoContainer = document.getElementById('dino-container');
         const dinoReveal = renderDinosaur(dinoBodyMix);
-        console.log(dinoReveal);
 
         dinoContainer.append(dinoReveal);
-        //grab dino-container from HTML and append dinoReveal into that
-        //return dinoReveal;
     }
-
-
-
 });
 
 
