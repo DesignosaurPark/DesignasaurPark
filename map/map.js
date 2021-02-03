@@ -33,34 +33,29 @@ for (const dino of userTest.dinoArray) {
     renderPosition(dino, ul);
 }
 
-const allDots = document.querySelectorAll('#dot');
-
-for (let i = 0; i < allDots.length; i++) {
-    const element = allDots[i];
-    element.addEventListener('click', () => {
-        console.log('clicked');
-        infoAreaContainerDiv.textContent = '';
-
-        let technicalInfoDiv = renderTechnicalInfo(userTest, element.value);
-
-        infoAreaContainerDiv.append(technicalInfoDiv);
-    });
-}
+renderDots();
 
 advanceDayButton.addEventListener('click', () => {
     
-    for (let dino of userTest.dinoArray){
-        dino.left = getRandomCoordinate();
+    for (const dino of userTest.dinoArray) {
         dino.top = getRandomCoordinate();
+        dino.left = getRandomCoordinate();
         renderPosition(dino, ul);
     }
+    renderDots();
+     
+});
 
+createAnotherButton.addEventListener('click', () =>{
+    window.location = '../lab';
+});
+
+function renderDots() {
     const allDots = document.querySelectorAll('#dot');
-
+    
     for (let i = 0; i < allDots.length; i++) {
         const element = allDots[i];
         element.addEventListener('click', () => {
-            console.log('clicked');
             infoAreaContainerDiv.textContent = '';
     
             let technicalInfoDiv = renderTechnicalInfo(userTest, element.value);
@@ -68,9 +63,5 @@ advanceDayButton.addEventListener('click', () => {
             infoAreaContainerDiv.append(technicalInfoDiv);
         });
     }
-     
-});
-
-createAnotherButton.addEventListener('click', () =>{
-    window.location = '../lab';
-});
+    
+}
