@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/incubation.css">
     <title>Designasaur Park Incubation Page</title>
 </head>
 
@@ -17,21 +18,26 @@
         <img src="../assets/headingImg.png" alt="heading logo">
         <div></div>
     </header>
-    <main>
-        <section class="main-section">
-            <p>Incubation Page</p>
+    <main class="outer-incubation-main">
+        <section class="left-spacing"></section>
+        <section class="inner-incubation-content">
+            <div class="incubation-title-box">
+                <p class="incubation-title">Incubation Chamber</p>
+            </div>
             <div id="dino-container">
 
             </div>
             <!-- <label>Enter your dinosaur's species name:</label>
             <input type='text'> -->
             <div id="species-chooser">
-                <label id="species-choice">Enter your Dinosaur's species name:</label>
+                <label id="species-choice">Enter a species name for your new Dinosaur: </label>
                 <input id="species-input" type="name">
             </div>
-
-            <button id='release-button'>Release into Park</button>
+            <div class="release-button-box">
+                <button id='release-button'>Release into Park</button>
+            </div>
         </section>
+        <section class="right-spacing"></section>
     </main>
     <script type="module" src="./incubation.js"></script>
 </body>
