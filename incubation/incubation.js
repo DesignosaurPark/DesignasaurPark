@@ -4,20 +4,12 @@ import { renderDinosaur, stackRankTotals } from './incubation-utils.js';
 //const USER = 'USER';
 //const user = JSON.parse(localStorage.getItem(USER));
 
-
-
-
-
-
-
 const hatchingSpace = document.getElementById('dino-container');
 const eggImg = document.createElement('img');
 eggImg.src = '../assets/green-egg-100.png';
-const dinoLabelPrompt = document.createElement('label');
+const namedSpecies = document.getElementById('species-input');
 
-
-dinoLabelPrompt.textContent = `Enter your Dinosaur's species name:`;
-hatchingSpace.append(eggImg, dinoLabelPrompt);
+hatchingSpace.append(eggImg);
 
 //on page load:
 //eggImgOne is visible, eggImgTwo is hidden
