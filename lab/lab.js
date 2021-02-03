@@ -2,10 +2,6 @@
 import { grabSum } from '../utils.js';
 import { compareSliderTotal } from './lab-utils.js';
 
-// On page load:
-//     -structure is present
-//     - grab DOM elements
-
 const dinoRangeTRex = document.getElementById('dnaTRex');
 const dinoRangeTriceratops = document.getElementById('dnaTriceratops');
 const dinoRangePterodactyl = document.getElementById('dnaPterodactyl');
@@ -34,7 +30,6 @@ document.querySelectorAll('.range-input').forEach(range => {
         
         const dnaTracker = document.getElementById('dna-tracker');
         dnaTracker.textContent = `${newTotal}% DNA resources used.`;
-        console.log(combinedTotal, newTotal);
     });
 });
 
@@ -52,13 +47,20 @@ dinoRangePterodactyl.addEventListener('change', () => {
 });
 
 
-
-
 // on button click (event listener)
-//     -take in form data 
-//     - const user object (check whether user exists with getUser())
-//         -dino array within user - set top and left coordinates
-//     -getRandomCoordinates()
-//     -send to local storage (setUser())
-//         -let dinoId = 0 (if only 1 dino)
-//     -redirect to incubation page 
+const incubateButton = document.getElementById('incubate-button');
+incubateButton.addEventListener('click', () => {
+    //     -take in form data 
+    // getUser(USER)
+    //     if (!USER) {
+    //         USER = ;
+    //     }
+    //     - const user object (check whether user exists with getUser())
+    //         -dino array within user - set top and left coordinates
+    //     -getRandomCoordinates()
+    //     -send to local storage (setUser())
+    // setUser()
+    //         -let dinoId = 0 (if only 1 dino)
+    //     -redirect to incubation page
+    document.location.href = '../incubation/';
+});
