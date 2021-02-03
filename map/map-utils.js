@@ -1,7 +1,6 @@
 import { findByDinoId } from '../utils.js';
 
 export function renderPosition(newestDino, ul) {
-    ul.textContent = '';
     const dinoTop = newestDino.top;
     const dinoLeft = newestDino.left;
     const dinoId = newestDino.dinoId;

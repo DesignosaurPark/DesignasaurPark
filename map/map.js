@@ -1,24 +1,8 @@
 import { renderPosition, renderTechnicalInfo } from './map-utils.js';
 import { clamp, incrementRandomCoordinate } from '../utils.js';
+import { getUser, setUser } from '../local-storage-utils.js';
 
-const userTest = {
-
-    userName: 'Alan',
-    dinoArray: [
-        {
-            dinoId: 1,
-            species: 'Raptor',
-            tRexPercent: 70,
-            triceratopsPercent: 20,
-            pterodactylPercent: 10,
-            name: 'Betty',
-            description: 'This is an angry dinosaur.',
-            img: 'headingImg.jpg',
-            top: 38,
-            left: 40,
-        }
-    ]
-};
+const user = getUser();
 
 // const user = getUser();
 const ul = document.getElementById('map-list');
@@ -27,9 +11,10 @@ const userNotesTextarea = document.getElementById('user-notes');
 const advanceDayButton = document.getElementById('advance-day');
 const createAnotherButton = document.getElementById('create-another');
 
-userNotesTextarea.placeholder = `Dr.${userTest.userName}'s notes`;
+userNotesTextarea.placeholder = `Dr.${user.userName}'s notes`;
 
-for (const dino of userTest.dinoArray) {
+
+for (const dino of user.dinoArray) {
     renderPosition(dino, ul);
 }
 
@@ -38,11 +23,13 @@ renderDots();
 advanceDayButton.addEventListener('click', () => {
     
     infoAreaContainerDiv.textContent = '';
-    for (const dino of userTest.dinoArray) {
+    ul.textContent = '';
+    for (const dino of user.dinoArray) {
         dino.top = clamp((dino.top + incrementRandomCoordinate()), 10, 90);
         dino.left = clamp((dino.left + incrementRandomCoordinate()), 30, 70);
         renderPosition(dino, ul);
     }
+    setUser(user);
     renderDots();
      
 });
@@ -59,7 +46,7 @@ function renderDots() {
         element.addEventListener('click', () => {
             infoAreaContainerDiv.textContent = '';
     
-            let technicalInfoDiv = renderTechnicalInfo(userTest, element.value);
+            let technicalInfoDiv = renderTechnicalInfo(user, element.value);
     
             infoAreaContainerDiv.append(technicalInfoDiv);
         });
