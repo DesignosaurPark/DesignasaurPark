@@ -27,11 +27,12 @@ eggImg.addEventListener('click', () => {
     } else if (eggCounter === 2) {
 
         eggImg.style.display = 'none';
-
+        console.log(user);
         const dinoBodyMix = stackRankTotals(user);
+        console.log(dinoBodyMix);
         const dinoContainer = document.getElementById('dino-container');
         const dinoReveal = renderDinosaur(dinoBodyMix);
-
+        console.log(dinoReveal);
         dinoContainer.append(dinoReveal);
     }
 });
