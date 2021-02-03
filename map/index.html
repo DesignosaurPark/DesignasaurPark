@@ -20,24 +20,28 @@
     </header>
     <main>
         <section class="main-section">
-            <p>Map page</p>
-            <div id='map-container'>
-                <ul id='map-list'>
-
-                </ul>
-            </div>
-            <div id = 'info-area-container'>
-                <!-- grab this in map.js and append our return value from renderInformation to it-->
-            </div>
-            <div id = 'notes container'>
-                <!-- in p'Notes' is temporary and will be replaced with '${user.name}'s notes'-->
-                <p id = 'user-notes-name'>Notes</p>
-                <textarea name="notes" id="user-notes" cols="30" rows="10"></textarea>
-            </div>
-            <div class = 'button-container'>
-                <button id = 'advance-day'>Advance day?</button>
-                <button id = 'create-another'>Create another?</button>
-            </div>
+            <section class = "upper">
+                <div id='map-container'>
+                    <p>Map page</p>
+                    <ul id='map-list'>
+    
+                    </ul>
+                </div>
+            </section>
+            <section class = "lower">
+                <div id = 'info-area-container'>
+                    <span>Click on a dino to view stats</span>
+                    <!-- grab this in map.js and append our return value from renderInformation to it-->
+                </div>
+                <div class = 'button-container'>
+                    <button id = 'advance-day'>Advance day?</button>
+                    <button id = 'create-another'>Create another?</button>
+                </div>
+                <div id = 'notes-container'>
+                    <!-- in p'Notes' is temporary and will be replaced with '${user.name}'s notes'-->
+                    <textarea name="notes" id="user-notes" cols="30" rows="10"></textarea>
+                </div>
+            </section>
         <!-- info container div will be put here in map.js-->    
         </section>
     </main>
