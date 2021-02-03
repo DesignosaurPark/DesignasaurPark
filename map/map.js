@@ -23,11 +23,11 @@ const userTest = {
 // const user = getUser();
 const ul = document.getElementById('map-list');
 const infoAreaContainerDiv = document.getElementById('info-area-container');
-const userNotesP = document.getElementById('user-notes-name');
+const userNotesTextarea = document.getElementById('user-notes');
 const advanceDayButton = document.getElementById('advance-day');
 const createAnotherButton = document.getElementById('create-another');
 
-userNotesP.textContent = `Dr.${userTest.userName}'s notes`;
+userNotesTextarea.placeholder = `Dr.${userTest.userName}'s notes`;
 
 for (const dino of userTest.dinoArray) {
     renderPosition(dino, ul);
@@ -38,6 +38,7 @@ const allDots = document.querySelectorAll('#dot');
 for (let i = 0; i < allDots.length; i++) {
     const element = allDots[i];
     element.addEventListener('click', () => {
+        console.log('clicked');
         infoAreaContainerDiv.textContent = '';
 
         let technicalInfoDiv = renderTechnicalInfo(userTest, element.value);
@@ -52,6 +53,20 @@ advanceDayButton.addEventListener('click', () => {
         dino.left = getRandomCoordinate();
         dino.top = getRandomCoordinate();
         renderPosition(dino, ul);
+    }
+
+    const allDots = document.querySelectorAll('#dot');
+
+    for (let i = 0; i < allDots.length; i++) {
+        const element = allDots[i];
+        element.addEventListener('click', () => {
+            console.log('clicked');
+            infoAreaContainerDiv.textContent = '';
+    
+            let technicalInfoDiv = renderTechnicalInfo(userTest, element.value);
+    
+            infoAreaContainerDiv.append(technicalInfoDiv);
+        });
     }
      
 });
