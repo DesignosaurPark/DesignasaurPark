@@ -1,4 +1,5 @@
 import { renderPosition, renderTechnicalInfo } from './map-utils.js';
+import { getRandomCoordinate } from '../utils.js';
 
 const userTest = {
 
@@ -26,7 +27,9 @@ const userNotesP = document.getElementById('user-notes-name');
 const advanceDayButton = document.getElementById('advance-day');
 const createAnotherButton = document.getElementById('create-another');
 
-renderPosition(userTest, ul);
+for (const dino of userTest.dinoArray) {
+    renderPosition(dino, ul);
+}
 
 const allDots = document.querySelectorAll('#dot');
 
@@ -40,3 +43,17 @@ for (let i = 0; i < allDots.length; i++) {
         infoAreaContainerDiv.append(technicalInfoDiv);
     });
 }
+
+advanceDayButton.addEventListener('click', () => {
+    
+    for (let dino of userTest.dinoArray){
+        dino.left = getRandomCoordinate();
+        dino.top = getRandomCoordinate();
+        renderPosition(dino, ul);
+    }
+     
+});
+
+createAnotherButton.addEventListener('click', () =>{
+    window.location = '../lab';
+});
