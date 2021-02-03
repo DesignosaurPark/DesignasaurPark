@@ -18,11 +18,17 @@ const userTest = {
         }
     ]
 };
-const ul = document.getElementById('map-list');
 
+// const user = getUser();
+const ul = document.getElementById('map-list');
+const infoAreaContainerDiv = document.getElementById('info-area-container');
+const userNotesP = document.getElementById('user-notes-name');
+
+//let technicalInfoDiv = renderTechnicalInfo(user, ?)
+let technicalInfoDiv = renderTechnicalInfo(userTest, 1);
+
+//renderPosition(user, ul);
 renderPosition(userTest, ul);
 
-console.log();
-
-renderTechnicalInfo(userTest, 1);
+infoAreaContainerDiv.append(technicalInfoDiv);
 

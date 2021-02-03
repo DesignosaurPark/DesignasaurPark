@@ -30,9 +30,9 @@ export function renderTechnicalInfo(user, dinoId) {
 
     const dino = findByDinoId(dinoId, user.dinoArray);
 
-    dinoName.textContent = dino.name;
-    dinoSpecies.textContent = dino.species;
-    dinoCoordinates.textContent = `${dino.top}N, ${dino.left}W`;
+    dinoName.textContent = `Name: ${dino.name} `;
+    dinoSpecies.textContent = `Species: ${dino.species} `;
+    dinoCoordinates.textContent = `Coordinates: ${dino.top}N, ${dino.left}W `;
     dinoDescription.textContent = dino.description;
 
     div.append(dinoName, dinoSpecies, dinoCoordinates, dinoDescription);
