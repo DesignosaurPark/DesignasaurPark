@@ -1,5 +1,5 @@
-// import functions and grab DOM elements
+const goToLabButton = document.getElementById('lab-button');
 
-// initialize state
-
-// set event listeners to update state and DOM
+goToLabButton.addEventListener('click', () => {
+    document.location.href = '../lab/';
+});
