@@ -1,6 +1,10 @@
-// import { getUser, setUser } from './local-storage-utils.js';
-import { grabSum } from '../utils.js';
+import { getUser, setUser } from '../local-storage-utils.js';
+import { grabSum, getRandomCoordinate } from '../utils.js';
 import { compareSliderTotal } from './lab-utils.js';
+
+const user = getUser();
+const userName = document.getElementById('user-name');
+const dinoName = document.getElementById('dino-name');
 
 const dinoRangeTRex = document.getElementById('dnaTRex');
 const dinoRangeTriceratops = document.getElementById('dnaTriceratops');
@@ -50,17 +54,45 @@ dinoRangePterodactyl.addEventListener('change', () => {
 // on button click (event listener)
 const incubateButton = document.getElementById('incubate-button');
 incubateButton.addEventListener('click', () => {
-    //     -take in form data 
-    // getUser(USER)
-    //     if (!USER) {
-    //         USER = ;
-    //     }
-    //     - const user object (check whether user exists with getUser())
-    //         -dino array within user - set top and left coordinates
-    //     -getRandomCoordinates()
-    //     -send to local storage (setUser())
-    // setUser()
-    //         -let dinoId = 0 (if only 1 dino)
-    //     -redirect to incubation page
+    const coordinateTop = getRandomCoordinate();
+    const coordinateLeft = getRandomCoordinate();
+
+    
+    if (!user) {
+        const newUser = {
+            userName: userName.value,
+            dinoArray: [
+                {
+                    dinoId: 0,
+                    species: '',
+                    tRexPercent: dinoRangeTRex.value,
+                    triceratopsPercent: dinoRangeTriceratops.value,
+                    pterodactylPercent: dinoRangePterodactyl.value,
+                    name: dinoName.value,
+                    description: '',
+                    img: '',
+                    top: coordinateTop,
+                    left: coordinateLeft,
+                }
+            ]
+        };
+        setUser(newUser);
+    }
+    if (user) {
+        const newDino = {
+            dinoId: user.dinoArray[user.dinoArray.length - 1].dinoId + 1,
+            species: '',
+            tRexPercent: dinoRangeTRex.value,
+            triceratopsPercent: dinoRangeTriceratops.value,
+            pterodactylPercent: dinoRangePterodactyl.value,
+            name: dinoName.value,
+            description: '',
+            img: '',
+            top: coordinateTop,
+            left: coordinateLeft,
+        };
+        user.dinoArray.push(newDino);
+        setUser(user);
+    }
     document.location.href = '../incubation/';
 });
