@@ -1,19 +1,42 @@
 // import { getUser, setUser } from './local-storage-utils.js';
 import { grabSum } from '../utils.js';
-// import { compareSliderTotal() } from './lab-utils.js';
+import { compareSliderTotal } from './lab-utils.js';
 
 // On page load:
 //     -structure is present
 //     - grab DOM elements
-//     -disable button
 
 const dinoRangeTRex = document.getElementById('dnaTRex');
-const dinoRangeTriceratops = document.getElementById('dnaTricera');
-const dinoRangePterodactyl = document.getElementById('dnaPtero');
+const dinoRangeTriceratops = document.getElementById('dnaTriceratops');
+const dinoRangePterodactyl = document.getElementById('dnaPterodactyl');
 
 const tRexTotalLabel = document.getElementById('dnaTRexLabel');
 const triceratopsTotalLabel = document.getElementById('dnaTriceratopsLabel');
 const pterodactylTotalLabel = document.getElementById('dnaPterodactylLabel');
+
+//     -On change event for any range input - grab total of 3 %s 
+document.querySelectorAll('.range-input').forEach(range => {
+    range.addEventListener('change', (e) => {
+        let tRexTotal = dinoRangeTRex.value;
+        let triceratopsTotal = dinoRangeTriceratops.value;
+        let pterodactylTotal = dinoRangePterodactyl.value;
+        const currentRangeInput = e.target;
+
+        let combinedTotal = grabSum(tRexTotal, triceratopsTotal, pterodactylTotal);
+
+        compareSliderTotal(currentRangeInput, combinedTotal);
+
+        //     Show realtime % in feedback display
+        tRexTotal = dinoRangeTRex.value;
+        triceratopsTotal = dinoRangeTriceratops.value;
+        pterodactylTotal = dinoRangePterodactyl.value;
+        let newTotal = grabSum(tRexTotal, triceratopsTotal, pterodactylTotal);
+        
+        const dnaTracker = document.getElementById('dna-tracker');
+        dnaTracker.textContent = `${newTotal}% DNA resources used.`;
+        console.log(combinedTotal, newTotal);
+    });
+});
 
 // on slider change (event listener)
 dinoRangeTRex.addEventListener('change', () => {
@@ -21,27 +44,14 @@ dinoRangeTRex.addEventListener('change', () => {
 });
 
 dinoRangeTriceratops.addEventListener('change', () => {
-    triceratopsTotalLabel.textContent = `Triceratops Rex DNA ${dinoRangeTriceratops.value}%`;
+    triceratopsTotalLabel.textContent = `Triceratops DNA ${dinoRangeTriceratops.value}%`;
 });
 
 dinoRangePterodactyl.addEventListener('change', () => {
-    pterodactylTotalLabel.textContent = `Pterodactyl Rex DNA ${dinoRangePterodactyl.value}%`;
+    pterodactylTotalLabel.textContent = `Pterodactyl DNA ${dinoRangePterodactyl.value}%`;
 });
 
 
-
-//     Show realtime % in feedback display
-// grabSum(dinoRangeTRex.value, dinoRangeTriceratops.value, dinoRangePterodactyl.value);
-
-//     -grab total of 3 %s (grabsum())
-
-//     -compareSliderTotal() NEED TO WRITE
-        // -compare total of 3 to 100
-        // -if total >100%, stepDown last adjusted slider
-            // give error toast message
-        // If 100% - create button
-// const labButton = document.getElementById('button');
-// labButton.textContent = 'Incubate your Dinosaur';
 
 
 // on button click (event listener)
