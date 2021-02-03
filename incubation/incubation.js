@@ -1,8 +1,11 @@
+import { findByDinoId } from '../utils.js';
 import { renderDinosaur, stackRankTotals } from './incubation-utils.js';
 //import data from '../dinoData.js';
 
 //const USER = 'USER';
 //const user = JSON.parse(localStorage.getItem(USER));
+const form = document.querySelector('form');
+
 
 const hatchingSpace = document.getElementById('dino-container');
 const eggImg = document.createElement('img');
@@ -57,7 +60,9 @@ eggImg.addEventListener('click', () => {
     }
 });
 
-
+const formData = new FormData(form);
+const selectionId = formData.get(namedSpecies);
+console.log(selectionId);
 
 //redirect to map page
 const releaseButton = document.getElementById('release-button');
@@ -65,6 +70,39 @@ const releaseButton = document.getElementById('release-button');
 releaseButton.addEventListener('click', (e) => {
     e.preventDefault();
 
+    const formData = new FormData(form);
+    const selectionId = formData.get(namedSpecies);
+    console.log(selectionId);
+
+    const choice = findById(selectionId, user.dinoArray);
+
+    const uniqueDino = findByDinoId(dinoId, user.dinoArray);
+
+    const newDinoSpecies =
+
+        user.dinoArray.species =
+
+        localStorage.setItem('USER', JSON.stringify(user));
+
+
+
     window.location = '../map/index.html';
 });
 
+
+
+// const formData = new FormData(form);
+// const selectionId = formData.get('choices');
+// const choice = findById(selectionId, quest.choices);
+
+// const user = JSON.parse(localStorage.getItem(USER));
+
+// const span = document.getElementById('choice-result');
+// span.textContent = choice.result;
+
+
+// user.health = user.health + choice.health;
+// user.bounty = user.bounty + choice.bounty;
+// user.completed[questId] = true;
+
+// localStorage.setItem('USER', JSON.stringify(user));
