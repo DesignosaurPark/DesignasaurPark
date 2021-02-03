@@ -13,6 +13,12 @@ export function renderDinosaur(dinoPartIdArray) {
         descriptionPieceArr.push(DinoDataObj.description);
         const dinoImg = document.createElement('img');
         dinoImg.src = `../assets/${DinoDataObj.img}`;
+        dinoImg.style.display = 'flex';
+        dinoImg.style.flexDirection = 'column';
+        dinoImg.style.alignContent = 'center';
+        dinoImg.style.justifyContent = 'center';
+        dinoContainer.style.display = 'flex';
+        dinoContainer.style.flexDirection = 'column';
         dinoContainer.append(dinoImg);
     }
 
