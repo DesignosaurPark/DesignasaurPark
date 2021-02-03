@@ -27,6 +27,8 @@ const userNotesP = document.getElementById('user-notes-name');
 const advanceDayButton = document.getElementById('advance-day');
 const createAnotherButton = document.getElementById('create-another');
 
+userNotesP.textContent = `Dr.${userTest.userName}'s notes`;
+
 for (const dino of userTest.dinoArray) {
     renderPosition(dino, ul);
 }
