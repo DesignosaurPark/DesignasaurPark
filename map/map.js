@@ -1,5 +1,5 @@
 import { renderPosition, renderTechnicalInfo } from './map-utils.js';
-import { incrementRandomCoordinate } from '../utils.js';
+import { clamp, incrementRandomCoordinate } from '../utils.js';
 
 const userTest = {
 
@@ -39,8 +39,8 @@ advanceDayButton.addEventListener('click', () => {
     
     infoAreaContainerDiv.textContent = '';
     for (const dino of userTest.dinoArray) {
-        dino.top += incrementRandomCoordinate();
-        dino.left = incrementRandomCoordinate();
+        dino.top = clamp((dino.top + incrementRandomCoordinate()), 10, 90);
+        dino.left = clamp((dino.left + incrementRandomCoordinate()), 30, 70);
         renderPosition(dino, ul);
     }
     renderDots();
