@@ -37,6 +37,7 @@ renderDots();
 
 advanceDayButton.addEventListener('click', () => {
     
+    infoAreaContainerDiv.textContent = '';
     for (const dino of userTest.dinoArray) {
         dino.top = getRandomCoordinate();
         dino.left = getRandomCoordinate();
