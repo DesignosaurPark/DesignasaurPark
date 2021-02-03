@@ -5,9 +5,12 @@ export function renderPosition(user, ul) {
 
     const dinoTop = newestDino.top;
     const dinoLeft = newestDino.left;
+    const dinoId = newestDino.dinoId;
 
     const dot = document.createElement('img');
     dot.src = '../assets/black-dot.jpg';
+    dot.id = 'dot';
+    dot.value = dinoId;
     dot.style.width = '30px';
     dot.style.height = '30px';
     dot.style.top = `${dinoTop}%`;

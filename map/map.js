@@ -23,12 +23,20 @@ const userTest = {
 const ul = document.getElementById('map-list');
 const infoAreaContainerDiv = document.getElementById('info-area-container');
 const userNotesP = document.getElementById('user-notes-name');
+const advanceDayButton = document.getElementById('advance-day');
+const createAnotherButton = document.getElementById('create-another');
 
-//let technicalInfoDiv = renderTechnicalInfo(user, ?)
-let technicalInfoDiv = renderTechnicalInfo(userTest, 1);
-
-//renderPosition(user, ul);
 renderPosition(userTest, ul);
 
-infoAreaContainerDiv.append(technicalInfoDiv);
+const allDots = document.querySelectorAll('#dot');
 
+for (let i = 0; i < allDots.length; i++) {
+    const element = allDots[i];
+    element.addEventListener('click', () => {
+        infoAreaContainerDiv.textContent = '';
+
+        let technicalInfoDiv = renderTechnicalInfo(userTest, element.value);
+
+        infoAreaContainerDiv.append(technicalInfoDiv);
+    });
+}
