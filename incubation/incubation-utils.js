@@ -24,9 +24,9 @@ export function renderDinosaur(dinoPartIdArray) {
 
     dinoContainer.append(dinoDescription);
 
-    return dinoContainer.outerHTML;
+    return dinoContainer;
 }
-
+//needs to return just the dinoContainer, not a string/outerHTML
 
 export function stackRankTotals(user) {
     const dinoObject = user.dinoArray[user.dinoArray.length - 1];

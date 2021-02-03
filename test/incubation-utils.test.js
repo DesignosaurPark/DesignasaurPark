@@ -35,7 +35,7 @@ test('the renderDinosaur function, when given user, return div with dino images 
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.deepEqual(actual.outerHTML, expected);
 });
 
 
