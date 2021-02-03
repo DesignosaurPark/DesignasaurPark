@@ -50,7 +50,7 @@ section {
 
 header {
     display: grid;
-    grid-template-columns: 500fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -63,8 +63,9 @@ header img {
 }
 
 header a {
-    overflow: visible;
-    align-self: flex-end;
+    justify-self: end;
+    margin: 25px 20px 0 0 ;
+    padding: 0;
 }
 
 footer {
