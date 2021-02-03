@@ -1,9 +1,8 @@
 export function grabSum(numOne, numTwo, numThree) {
 
-    let totalPercent = numOne + numTwo + numThree;
+    let totalPercent = Number(numOne) + Number(numTwo) + Number(numThree);
 
     return totalPercent;
-
 }
 
 export function findById(id, array) {
