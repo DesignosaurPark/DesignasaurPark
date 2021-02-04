@@ -6,6 +6,8 @@ export function renderDinosaur(dinoPartIdArray) {
     let descriptionPieceArr = [];
 
     const dinoContainer = document.createElement('div');
+    dinoContainer.style.display = 'flex';
+    dinoContainer.style.flexDirection = 'column';
 
     // loop through each result id, grab corresponding data obj. push obj.description to description Piece array, create and append img with obj.img as source.
     for (let id of dinoPartIdArray) {
@@ -17,12 +19,17 @@ export function renderDinosaur(dinoPartIdArray) {
         dinoImg.style.flexDirection = 'column';
         dinoImg.style.alignContent = 'center';
         dinoImg.style.justifyContent = 'center';
+        dinoImg.style.width = '40vw';
+        dinoImg.style.marginLeft = '20vw';
         dinoContainer.style.display = 'flex';
         dinoContainer.style.flexDirection = 'column';
         dinoContainer.append(dinoImg);
     }
 
     const dinoDescription = document.createElement('p');
+    dinoDescription.style.width = '80vw';
+    dinoDescription.style.textAlign = 'center';
+    dinoDescription.style.fontWeight = 'bold';
 
     const message = `Your Dinosaur is ${descriptionPieceArr[0]} fellow. They are ${descriptionPieceArr[1]}. They can reach speeds up to ${descriptionPieceArr[2]}.`;
 
