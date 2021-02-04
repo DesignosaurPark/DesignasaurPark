@@ -12,6 +12,8 @@ const namedSpecies = document.getElementById('species-input');
 chooseSpecies.style.display = 'none';
 namedSpecies.style.display = 'none';
 
+let dinoHeadImg = null;
+
 eggImg.src = '../assets/green-egg-100.png';
 hatchingSpace.append(eggImg);
 
@@ -35,6 +37,7 @@ eggImg.addEventListener('click', () => {
         const dinoBodyMix = stackRankTotals(user);
         const dinoContainer = document.getElementById('dino-container');
         const dinoReveal = renderDinosaur(dinoBodyMix);
+        dinoHeadImg = dinoReveal.firstChild.src;
         dinoContainer.append(dinoReveal);
     }
 });
@@ -50,6 +53,7 @@ releaseButton.addEventListener('click', (e) => {
 
     const dinosaur = user.dinoArray[user.dinoArray.length - 1];
     dinosaur.species = namedSpecies.value;
+    dinosaur.img = dinoHeadImg;
 
     setUser(user);
 
