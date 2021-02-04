@@ -40,6 +40,15 @@
     align-items: center;
 }
 
+.outer-dino-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 #dino-container {
     display: flex;
     flex-direction: column;
@@ -49,8 +58,8 @@
     /* border: solid 3px rgba(28, 92, 22, 0.836); */
     /* border: solid 5px rgba(28, 92, 22, 0.836);
     border-radius: 10px; */
-    width: 30vw;
-    max-height: 480px;
+    width: 50vw;
+    max-height: 360px;
     /* background-color: rgb(235, 207, 152); */
     /* background-color: rgba(141, 214, 134, 0.836); */
     margin-bottom: 20px;
@@ -84,8 +93,11 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    background-color: rgba(28, 92, 22, 0.836);
-    color: white;
+    background-color: black;
+    color: rgb(0, 179, 0);
+    border-radius: 20px;
+    border: 5px solid gray;
+    padding: 2px;
 }
 
 #species-input {
@@ -104,7 +116,7 @@ p {
 }
 
 #release-button {
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .left-spacing, .right-spacing {
