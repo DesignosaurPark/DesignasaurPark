@@ -4,11 +4,6 @@ import { getUser, setUser } from './local-storage-utils.js';
 const user = getUser();
 const userName = document.getElementById('visitor-sign-in');
 
-
-
-
-
-
 const securityScan = document.getElementById('security-scanner');
 
 let i = 0;
@@ -53,7 +48,7 @@ securityScan.addEventListener('click', () => {
     }
 
     chaosAudit(user);
-    document.location.href = './lab/';
+    //document.location.href = './lab/';
 
 });
 

@@ -4,13 +4,16 @@
 //     window.location = 
 // });
 
-export function chaosAudit(userName) {
+export function chaosAudit(user) {
 
-    const universalName = str.toLowerCase(userName);
+    const universalName = user.userName.toLowerCase();
+    // const nameString = userName.value;
+    // console.log(nameString);
+    // const universalName = nameString.toLowerCase();
 
-    if (universalName === 'ian' || universalName === 'malcom' || universalName === 'jeff' || universalName === 'goldblum') {
-        window.location = './lab/index.html';
-    } else {
+    if (universalName === 'ian' || universalName === 'malcolm' || universalName === 'jeff' || universalName === 'goldblum') {
         window.location = './jeff/index.html';
+    } else {
+        window.location = './lab/index.html';
     }
 }

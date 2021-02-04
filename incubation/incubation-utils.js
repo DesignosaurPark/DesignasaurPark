@@ -6,8 +6,11 @@ export function renderDinosaur(dinoPartIdArray) {
     let descriptionPieceArr = [];
 
     const dinoContainer = document.createElement('div');
+    const dinoPictureBox = document.createElement('figure');
     dinoContainer.style.display = 'flex';
     dinoContainer.style.flexDirection = 'column';
+    dinoPictureBox.style.display = 'flex';
+    dinoPictureBox.style.flexDirection = 'column';
 
     // loop through each result id, grab corresponding data obj. push obj.description to description Piece array, create and append img with obj.img as source.
     for (let id of dinoPartIdArray) {
@@ -20,15 +23,18 @@ export function renderDinosaur(dinoPartIdArray) {
         dinoImg.style.alignContent = 'center';
         dinoImg.style.justifyContent = 'center';
         dinoImg.style.width = '264px';
-        dinoImg.style.marginLeft = '20vw';
-        dinoImg.style.marginRight = '20vw';
+        dinoImg.style.marginLeft = '40vw';
+        dinoImg.style.marginRight = '40vw';
+        dinoPictureBox.style.display = 'flex';
+        dinoPictureBox.style.flexDirection = 'column';
         dinoContainer.style.display = 'flex';
         dinoContainer.style.flexDirection = 'column';
-        dinoContainer.append(dinoImg);
+        dinoPictureBox.append(dinoImg);
+        dinoContainer.append(dinoPictureBox);
     }
 
     const dinoDescription = document.createElement('p');
-    dinoDescription.style.width = '80vw';
+    dinoDescription.style.width = '100%';
     dinoDescription.style.textAlign = 'center';
     dinoDescription.style.fontWeight = 'bold';
 
