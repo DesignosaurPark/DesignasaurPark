@@ -68,7 +68,7 @@ export function dinoFight(dino1, dino2) {
     if (dino1.hp > 0 && dino2.img !== '../assets/deadDinoHead.png') dino1.hp -= dino2Damage;
     if (dino2.hp > 0 && dino1.img !== '../assets/deadDinoHead.png') dino2.hp -= dino1Damage;
 
-    message = `${dino1.name} did ${dino1Damage} to ${dino2.name}. They did ${dino2Damage} back`;
+    message = `${dino1.name} did ${dino1Damage} damage to ${dino2.name}. They did ${dino2Damage} back`;
     if (dino1.hp <= 0){
         message = `${dino1.name} was slain by ${dino2.name}`;
         dino1.img = '../assets/deadDinoHead.png';
