@@ -6,11 +6,11 @@ export function renderPosition(newestDino, ul) {
     const dinoId = newestDino.dinoId;
 
     const dot = document.createElement('img');
-    dot.src = '../assets/black-dot.jpg';
+    dot.src = `${newestDino.img}`;
     dot.id = 'dot';
     dot.value = dinoId;
-    dot.style.width = '30px';
-    dot.style.height = '30px';
+    dot.style.width = '45px';
+    dot.style.height = 'auto';
     dot.style.top = `${dinoTop}%`;
     dot.style.left = `${dinoLeft}%`;
     dot.style.position = 'absolute';
