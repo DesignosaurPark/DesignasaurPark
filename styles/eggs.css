@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+p {
+    color: grey;
+    font-size: 0.8em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#back-to-park {
+    background-color: purple;
+    color: white;
+    padding: 2px;
+    border: solid 1px white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
