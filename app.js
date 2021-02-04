@@ -1,8 +1,7 @@
 import { chaosAudit } from './jeff/jeff-utils.js';
 import { getUser, setUser } from './local-storage-utils.js';
-
-const user = getUser();
-const userName = document.getElementById('visitor-sign-in');
+let user = getUser();
+const userNameElement = document.getElementById('visitor-sign-in');
 
 const securityScan = document.getElementById('security-scanner');
 
@@ -24,7 +23,7 @@ securityScan.addEventListener('click', () => {
 
     if (!user) {
         const newUser = {
-            userName: userName.value,
+            userName: userNameElement.value,
             dinoArray: [
                 {
                     dinoId: 0,
@@ -42,11 +41,7 @@ securityScan.addEventListener('click', () => {
         };
         setUser(newUser);
     }
-
-    if (user) {
-        setUser(user);
-    }
-
+    user = getUser();
     chaosAudit(user);
     //document.location.href = './lab/';
 
