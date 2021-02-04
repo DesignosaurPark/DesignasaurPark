@@ -9,9 +9,17 @@
 }
 
 .inner-incubation-content {
-    display: grid;
-    height: 90vh;
+    display: flex;
+    min-height: 100vh;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    /* display: grid;
+    height: 100vh;
     grid-template-rows: 1fr 9fr 3fr 5fr;
+    align-items: center;
+    justify-content: center; */
 }
 
 .incubation-title-box {
@@ -33,20 +41,29 @@
 }
 
 #dino-container {
-    display: grid;
-    grid-template-rows: 3fr 1fr;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: 3fr 1fr; */
     justify-content: center;
     align-items: center;
     /* border: solid 3px rgba(28, 92, 22, 0.836); */
     /* border: solid 5px rgba(28, 92, 22, 0.836);
     border-radius: 10px; */
-    width: 480px;
-    height: 360px;
+    width: 30vw;
+    max-height: 480px;
     /* background-color: rgb(235, 207, 152); */
     /* background-color: rgba(141, 214, 134, 0.836); */
     margin-bottom: 20px;
     font-size: 1em;
 }
+
+/* img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+} */
 
 p {
     display: flex;
