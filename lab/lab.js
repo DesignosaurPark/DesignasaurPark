@@ -14,7 +14,9 @@ const tRexTotalLabel = document.getElementById('dnaTRexLabel');
 const triceratopsTotalLabel = document.getElementById('dnaTriceratopsLabel');
 const pterodactylTotalLabel = document.getElementById('dnaPterodactylLabel');
 
-//     -On change event for any range input - grab total of 3 %s 
+const incubateButton = document.getElementById('incubate-button');
+
+//On change event for any range input - grab total of 3 %s 
 document.querySelectorAll('.range-input').forEach(range => {
     range.addEventListener('change', (e) => {
         let tRexTotal = dinoRangeTRex.value;
@@ -52,7 +54,6 @@ dinoRangePterodactyl.addEventListener('change', () => {
 
 
 // on button click (event listener)
-const incubateButton = document.getElementById('incubate-button');
 incubateButton.addEventListener('click', () => {
     const coordinateTop = getRandomCoordinate();
     const coordinateLeft = getRandomCoordinate();

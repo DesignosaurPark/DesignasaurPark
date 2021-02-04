@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
-    <title>Welcome to Designasaur Park!</title>
+    <link rel="stylesheet" href="../styles/lab.css">
+
+    <title>Designasaur Park Lab</title>
 </head>
 
 <body>
@@ -18,40 +20,40 @@
         <div></div>
     </header>
     <main>
-        <section class="user-in">User Name:
+        <section class="user-in">Enter your Name:
             <input id="user-name">
         </section>
-        <section>
+        <section id='sliders-section'>
             <div id="dino-range-1">
-                <img src="../assets/e-flask_small.png" width="30">
-                <label id='dnaTRexLabel' for="dnaTRex">Tyrannosaurus DNA 0%</label>
-                <input type="range" id="dnaTRex" name="points" min="1" max="97" class='range-input' value='0'>
-
+                <img src="../assets/e-flask_small.png" width="30">                
+                <label id='dnaTRexLabel' for="dnaTRex">Tyrannosaurus DNA 1%</label>
+                <input type="range" id="dnaTRex" name="points" min="1" max="97" class='range-input' value='1'>
             </div>
             <div id="dino-range-2">
                 <img src="../assets/e-flask_small.png" width="30">
-                <label id='dnaTriceratopsLabel' for="dnaTriceratops">Triceratops DNA 0%</label>
-                <input type="range" id="dnaTriceratops" name="points" min="1" max="97" class='range-input' value='0'>
+                <label id='dnaTriceratopsLabel' for="dnaTriceratops">Triceratops DNA 1%</label>
+                <input type="range" id="dnaTriceratops" name="points" min="1" max="97" class='range-input' value='1'>
             </div>
             <div id="dino-range-3">
                 <img src="../assets/e-flask_small.png" width="30">
-                <label id='dnaPterodactylLabel' for="dnaPterodactyl">Pterodactyl DNA 0%</label>
-                <input type="range" id="dnaPterodactyl" name="points" min="1" max="97" class='range-input' value='0'>
+                <label id='dnaPterodactylLabel' for="dnaPterodactyl">Pterodactyl DNA 1%</label>
+                <input type="range" id="dnaPterodactyl" name="points" min="1" max="97" class='range-input' value='1'>
             </div>
-            <span id="error message"></span>
+            <div id= 'toast'></div>
         </section>
-        <section id="feedback">
-            <div id="dna-tracker">
-                <span></span>
+        <section id="feedback-section">
+            <div>
+                <span id="dna-graphic">
+                    <img src="../assets/mrDna.jpg" height="100px">
+                </span>
+                <span id="dna-tracker">0% DNA resources used</span>
             </div>
-            <div id="egg-graphic">Egg goes here
-                <img src="">
-            </div>
-            <section class="dino-in">Dinosaur Name:
-                <input id="dino-name">
-                <button id='incubate-button' class='hidden'>Incubate</button>
-            </section>
-    </main>
+        </section>
+        <section class="dino-in">Enter your Dinosaur's Name:
+            <input id="dino-name">
+            <button id='incubate-button' class='hidden'>Incubate</button>
+        </section>
+</main>
     <script type="module" src="lab.js"></script>
 </body>
 

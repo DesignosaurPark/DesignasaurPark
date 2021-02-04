@@ -1,1 +1,105 @@
-/* add home page styles here */
+body {
+    --color1: rgba(28, 92, 22, 0.836);
+    background-image: url('../assets/labBackground.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr .5fr 2fr 2fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.user-in {
+    background-color: var(--color1);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 90px;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-items: center;
+}
+
+#sliders-section {
+    background-color: var(--color1);
+    border-radius: 10px;
+    border: 2px solid black;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: right;
+    align-items: center;
+}
+
+#feedback-section {
+    background-color: var(--color1);
+    border-radius: 10px;
+    border: 2px solid black;
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: left;
+    align-items: center;
+}
+
+.dino-in {
+    background-color: var(--color1);
+    border-radius: 10px;
+    border: 2px solid black;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-items: center;
+}
+
+#dna-tracker {
+    justify-content: center;
+}
+
+#dna-graphic {
+    border-radius: 20px;
+    justify-content: end;    
+}
+
+input {
+    margin: 10px;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    bottom: 80%;
+}
+
+#toast.show {
+    visibility: visible;
+    color: greenyellow;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 80%; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 80%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
