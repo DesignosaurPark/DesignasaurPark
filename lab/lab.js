@@ -46,15 +46,15 @@ document.querySelectorAll('.range-input').forEach(range => {
 
         // Update test-tube image based on total
         if (newTotal > 1 && newTotal < 5) {
-            totalImage.src = '../assets/lab-images/test-tube-1.jpg';
+            totalImage.src = '../assets/lab-images/test-tube-1.png';
         } else if (newTotal > 4 && newTotal < 35) {
-            totalImage.src = '../assets/lab-images/test-tube-2.jpg';
+            totalImage.src = '../assets/lab-images/test-tube-2.png';
         } else if (newTotal > 34 && newTotal < 65) {
-            totalImage.src = '../assets/lab-images/test-tube-3.jpg';
+            totalImage.src = '../assets/lab-images/test-tube-3.png';
         } else if (newTotal > 64 && newTotal < 100) {
-            totalImage.src = '../assets/lab-images/test-tube-4.jpg';
+            totalImage.src = '../assets/lab-images/test-tube-4.png';
         } else if (newTotal === 100) {
-            totalImage.src = '../assets/lab-images/test-tube-5.jpg';
+            totalImage.src = '../assets/lab-images/test-tube-5.png';
         }
     });
 });
