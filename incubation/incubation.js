@@ -40,7 +40,7 @@ eggImg.addEventListener('click', () => {
         const dinoBodyMix = stackRankTotals(dino);
         const dinoContainer = document.getElementById('dino-container');
         const dinoReveal = renderDinosaur(dinoBodyMix);
-        dinoHeadImg = dinoReveal.firstChild.src;
+        dinoHeadImg = dinoReveal.firstChild.firstChild.src;
         dinoContainer.append(dinoReveal);
     }
 });
