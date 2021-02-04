@@ -113,7 +113,7 @@ export function renderDots(infoAreaContainerDiv, user) {
             infoAreaContainerDiv.append(technicalInfoDiv, dinoImgElement);
             const collisionDino = dinoCollision(dino, user.dinoArray);
             if (collisionDino && collisionDino.name !== ''){
-                fightButton.textContent = `${dino.name} Vs. ${collisionDino.name}?`;
+                fightButton.textContent = `Attack ${collisionDino.name}?`;
                 fightButton.addEventListener('click', () =>{
                     fightText.textContent = dinoFight(dino, collisionDino);
                     infoAreaContainerDiv.append(fightText);
