@@ -3,6 +3,7 @@ import { grabSum, getRandomCoordinate } from '../utils.js';
 import { compareSliderTotal } from './lab-utils.js';
 
 const user = getUser();
+const greeting = document.getElementById('greeting');
 const userName = document.getElementById('user-name');
 const dinoName = document.getElementById('dino-name');
 
@@ -15,6 +16,12 @@ const triceratopsTotalLabel = document.getElementById('dnaTriceratopsLabel');
 const pterodactylTotalLabel = document.getElementById('dnaPterodactylLabel');
 
 const incubateButton = document.getElementById('incubate-button');
+
+// On load, pull in user name for greeting
+getUser();
+const greetingName = user.name;
+greeting.textContent = `Hello Dr. ${greetingName}`;
+
 
 //On change event for any range input - grab total of 3 %s 
 document.querySelectorAll('.range-input').forEach(range => {
