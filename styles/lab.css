@@ -1,6 +1,6 @@
 body {
     --color1: rgba(28, 92, 22, 0.836);
-    background-image: url('../assets/labBackground.jpg');
+    background-image: url('../assets/lab-images/labBackground.jpg');
     background-repeat: no-repeat;
     /* background-position: center; */
     color: white;
@@ -47,6 +47,7 @@ main {
     grid-row-end: 3;
     justify-self: left;
     align-items: center;
+    justify-items: space-between;
 }
 
 .dino-in {
@@ -64,9 +65,13 @@ main {
     justify-content: center;
 }
 
+#dna-graphic-container {
+    justify-content: right;    
+}
+
 #dna-graphic {
-    border-radius: 20px;
-    justify-content: end;    
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 input {
