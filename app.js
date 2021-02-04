@@ -1,5 +1,6 @@
-const goToLabButton = document.getElementById('lab-button');
+//const goToLabButton = document.getElementById('lab-button');
+const securityScan = document.getElementById('security-scanner');
 
-goToLabButton.addEventListener('click', () => {
+securityScan.addEventListener('click', () => {
     document.location.href = './lab/';
 });
