@@ -1,36 +1,42 @@
-
-main {
+body {
     --color1: rgba(28, 92, 22, 0.836);
     background-image: url('../assets/jeep.jpg');
-    background-size: 100%;
+    background-size: 120%;
+    background-position: top center;
     background-repeat: no-repeat;
-    color: white;
-    border: solid 2px var(--color1);
 }
 
 .main-section {
+    --color1: rgba(28, 92, 22, 0.836);
+    color: white;
+}
+
+p {
+    margin-top: 30px;
+}
+
+#bio-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
+    margin-bottom: 30px;
     }
 
-    section {
-        border: none;
-    }
+section {
+    border: none;
+}
 
 .about-box {
     justify-content: center;
     border-radius: 10px;
-    border: 2px solid black;
     margin: 10px;
-    justify-items: center;
-    width: 300px;
+    padding: 10px;
+    width: 380px;
+    background-color: var(--color1);
+    font-weight: 500;
+    text-align: center;
 }
 
 .bio-pic {
@@ -38,6 +44,10 @@ main {
     border-radius: 50%;
     height: 80px;
     width: auto;
+}
+
+a {
+    color: rgb(49, 173, 223);
 }
 
 /* #about-sam {
