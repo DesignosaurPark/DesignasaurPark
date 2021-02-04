@@ -105,28 +105,23 @@ export function renderDots(infoAreaContainerDiv, user) {
             const fightText = document.createElement('span');
 
             dinoImgElement.lastChild.textContent = '';
-            dinoImgElement.style.transform = 'scale(0.25)';
             dinoImgElement.style.position = 'absolute';
-            dinoImgElement.style.left = '40%';
-            dinoImgElement.style.top = '-40%';
-            dinoImgElement.style.backgroundColor = 'limegreen';
-            dinoImgElement.style.paddingTop = '50px';
-            dinoImgElement.style.borderRadius = '100%';
-
+            dinoImgElement.style.left = '-113%';
+            dinoImgElement.style.top = '-45%';
+            dinoImgElement.style.transform = 'scale(0.225)';
 
             infoAreaContainerDiv.append(technicalInfoDiv, dinoImgElement);
             const collisionDino = dinoCollision(dino, user.dinoArray);
-            if (collisionDino){
-                fightButton.textContent = `${dino.name}vs${collisionDino.name}?`;
+            if (collisionDino && collisionDino.name !== ''){
+                fightButton.textContent = `${dino.name} Vs. ${collisionDino.name}?`;
                 fightButton.addEventListener('click', () =>{
                     fightText.textContent = dinoFight(dino, collisionDino);
                     infoAreaContainerDiv.append(fightText);
                 });
                 infoAreaContainerDiv.append(fightButton);
-            } 
+            }
 
         });
     }
     
 }
-
