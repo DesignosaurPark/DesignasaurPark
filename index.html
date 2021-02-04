@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Well, Well, Well</title>
+    <title>Welcome to Designasaur Park!</title>
 </head>
 
 <body>
@@ -20,16 +20,22 @@
     </header>
     <main class="outside-area">
         <section class="main-section">
-            <p>Welcome to Designasaur Park! Here you can genetically engineer new dinosaurs based on different DNA types
-                we have on hand. Well, what are you waiting for?</p>
-            <div class="visitor-check-in">
-                <label id="visitor-instructions"></label>
-                <input type="name" id="visitor-sign-in">
+            <p>
+            <h3>Welcome to <span class="epic-name">Designasaur Park</span>! Here you can genetically engineer new
+                dinosaurs
+                based on different DNA
+                types
+                we have on hand. Well, what are you waiting for?</h3>
+            </p>
+            <div class="security-desk">
+                <nav class="visitor-check-in">
+                    <label id="visitor-instructions"></label>
+                    <input type="name" id="visitor-sign-in">
+                </nav>
+                <nav class="security-area">
+                    <img src="./assets/fingerprint-scanner.png" id="security-scanner" width="64">
+                </nav>
             </div>
-            <div class="security-area">
-                <img src="./assets/fingerprint-scanner.png" id="security-scanner" width="64">
-            </div>
-            <!-- <button id="lab-button">Go to the Lab</button> -->
         </section>
     </main>
     <script type="module" src="app.js"></script>
