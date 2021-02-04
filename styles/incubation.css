@@ -10,7 +10,7 @@
 
 .inner-incubation-content {
     display: grid;
-    height: 70vh;
+    height: 90vh;
     grid-template-rows: 1fr 9fr 3fr 5fr;
 }
 
@@ -45,10 +45,7 @@
     /* background-color: rgb(235, 207, 152); */
     /* background-color: rgba(141, 214, 134, 0.836); */
     margin-bottom: 20px;
-}
-
-#eggImg {
-    width: 10px;
+    font-size: 1em;
 }
 
 p {
