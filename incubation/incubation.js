@@ -9,12 +9,13 @@ const hatchingSpace = document.getElementById('dino-container');
 const eggImg = document.createElement('img');
 const chooseSpecies = document.getElementById('species-choice');
 const namedSpecies = document.getElementById('species-input');
+eggImg.style.height = '300px';
 chooseSpecies.style.display = 'none';
 namedSpecies.style.display = 'none';
 
 let dinoHeadImg = null;
 
-eggImg.src = '../assets/green-egg-100.png';
+eggImg.src = '../assets/egg1-whole.png';
 hatchingSpace.append(eggImg);
 
 //on page load:
@@ -27,7 +28,7 @@ eggImg.addEventListener('click', () => {
 
     if (eggCounter === 1) {
 
-        eggImg.src = '../assets/red-egg-100.png';
+        eggImg.src = '../assets/egg1-cracked.png';
 
     } else if (eggCounter === 2) {
 
@@ -35,7 +36,7 @@ eggImg.addEventListener('click', () => {
         namedSpecies.style.display = 'block';
         eggImg.style.display = 'none';
         const dino = user.dinoArray[user.dinoArray.length - 1];
-        
+
         const dinoBodyMix = stackRankTotals(dino);
         const dinoContainer = document.getElementById('dino-container');
         const dinoReveal = renderDinosaur(dinoBodyMix);
