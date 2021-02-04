@@ -20,14 +20,36 @@ export function securityInstructions() {
 
 securityInstructions();
 
+
+export function grabAvatarImage() {
+    const avatarChoice = document.querySelector('input:checked').value;
+
+    if (avatarChoice === 'grant') {
+        const selectedAvatar = 'assets/avatars/square-av_alan-grant.png';
+        return selectedAvatar;
+    }
+
+    if (avatarChoice === 'sattler') {
+        const selectedAvatar = 'assets/avatars/square-av_ellie-sattler.png';
+        return selectedAvatar;
+    }
+
+    if (avatarChoice === 'malcolm') {
+        const selectedAvatar = 'assets/avatars/square-av_ian-malcolm.png';
+        return selectedAvatar;
+    }
+}
+
+
 securityScan.addEventListener('click', () => {
 
-    const avatarChoice = document.querySelector('input:checked').value;
+    //const avatarChoice = document.querySelector('input:checked').value;
+    const newAvatar = grabAvatarImage();
 
     if (!user) {
         const newUser = {
             userName: userName.value,
-            userAvatar: avatarChoice,
+            userAvatar: newAvatar,
             dinoArray: [
                 {
                     dinoId: 0,
@@ -56,9 +78,5 @@ securityScan.addEventListener('click', () => {
 });
 
 
-export function handScore(playerChoice)
 
 
-export function grabAvatarImage() {
-
-}
