@@ -63,7 +63,11 @@ section {
 	color: rgb(0, 179, 0);
 	overflow-y: scroll;
 }
-
+#info-area-container img {
+	border: none;
+	outline:none;
+	background-color: limegreen;
+}
 #info-area-container::-webkit-scrollbar {
 	display: none;
 }
