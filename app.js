@@ -22,9 +22,12 @@ securityInstructions();
 
 securityScan.addEventListener('click', () => {
 
+    const avatarChoice = document.querySelector('input:checked').value;
+
     if (!user) {
         const newUser = {
             userName: userName.value,
+            userAvatar: avatarChoice,
             dinoArray: [
                 {
                     dinoId: 0,
@@ -52,3 +55,10 @@ securityScan.addEventListener('click', () => {
 
 });
 
+
+export function handScore(playerChoice)
+
+
+export function grabAvatarImage() {
+
+}

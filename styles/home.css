@@ -13,6 +13,31 @@
     -webkit-text-fill-color: white;
 }
 
+.avatars {
+    display: inline;
+    align-items: center;
+    width: 280px;
+}
+
+.avatar-instructions {
+    display: flex;
+    align-items: flex-end;
+}
+
+.avatar-chassis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    padding: 2px;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+input {
+    display: none;
+}
+
 .visitor-check-in {
     display: block;
     justify-content: center;
