@@ -73,6 +73,8 @@ incubateButton.addEventListener('click', () => {
                 {
                     dinoId: 0,
                     species: '',
+                    hp: 100,
+                    daysLived: 0,
                     tRexPercent: Number(dinoRangeTRex.value),
                     triceratopsPercent: Number(dinoRangeTriceratops.value),
                     pterodactylPercent: Number(dinoRangePterodactyl.value),
@@ -90,6 +92,8 @@ incubateButton.addEventListener('click', () => {
         const newDino = {
             dinoId: user.dinoArray[user.dinoArray.length - 1].dinoId + 1,
             species: '',
+            hp: 100,
+            daysLived: 0,
             tRexPercent: Number(dinoRangeTRex.value),
             triceratopsPercent: Number(dinoRangeTriceratops.value),
             pterodactylPercent: Number(dinoRangePterodactyl.value),
