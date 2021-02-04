@@ -51,7 +51,7 @@ test('the stackRankTotals function, when given user, return the head, torso and 
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = stackRankTotals(userTest);
+    const actual = stackRankTotals(userTest.dinoArray[userTest.dinoArray.length - 1]);
 
     //Expect
     // Make assertions about what is expected versus the actual result
