@@ -26,7 +26,7 @@ const userTest = {
 test('the renderDinosaur function, when given user, return div with dino images and description', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div style=\"display: flex; flex-direction: column;\"><img src="../assets/tRexHeadImg.png\" style=\"display: flex; flex-direction: column; place-content: center;\"><img src="../assets/tRexTorsoImg.png\" style=\"display: flex; flex-direction: column; place-content: center;\"><img src="../assets/tRexLegsImg.png\" style=\"display: flex; flex-direction: column; place-content: center;\"><p>Your Dinosaur is an angry fellow. They are a carnivore. They can reach speeds up to 35 mph.</p></div>`;
+    const expected = `<div style=\"display: flex; flex-direction: column;\"><img src=\"../assets/tRexHeadImg.png\" style=\"display: flex; flex-direction: column; place-content: center; width: 36vw; margin-left: 20vw;\"><img src=\"../assets/tRexTorsoImg.png\" style=\"display: flex; flex-direction: column; place-content: center; width: 36vw; margin-left: 20vw;\"><img src=\"../assets/tRexLegsImg.png\" style=\"display: flex; flex-direction: column; place-content: center; width: 36vw; margin-left: 20vw;\"><p style=\"width: 80vw; text-align: center; font-weight: bold;\">Your Dinosaur is an angry fellow. They are a carnivore. They can reach speeds up to 35 mph.</p></div>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
