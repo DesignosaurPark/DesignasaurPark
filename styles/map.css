@@ -26,7 +26,6 @@ section {
 	align-items: center;
 }
 #map-container {
-	margin-top: 30px;
 	margin-bottom: 30px;
 	background-image: url('../assets/map.png');
 	background-repeat: no-repeat;
@@ -39,7 +38,7 @@ section {
 	border-radius: 20px;
 }
 
-#map-container p {
+.upper p {
 	font-family: 'JurassicPark', cursive;
 	font-size: 2.25em;
 	color: black;
@@ -47,6 +46,8 @@ section {
 	text-align: center;
 	position: relative;
 	z-index: 10;
+	margin: 0;
+	padding: 0 20px 0 20px;
 	
 	
 }
