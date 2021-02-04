@@ -15,13 +15,13 @@ const tRexTotalLabel = document.getElementById('dnaTRexLabel');
 const triceratopsTotalLabel = document.getElementById('dnaTriceratopsLabel');
 const pterodactylTotalLabel = document.getElementById('dnaPterodactylLabel');
 
+const totalImage = document.getElementById('total-test-tube');
 const incubateButton = document.getElementById('incubate-button');
 
 // On load, pull in user name for greeting
 getUser();
-const greetingName = user.name;
+const greetingName = user.userName;
 greeting.textContent = `Hello Dr. ${greetingName}`;
-
 
 //On change event for any range input - grab total of 3 %s 
 document.querySelectorAll('.range-input').forEach(range => {
@@ -43,6 +43,19 @@ document.querySelectorAll('.range-input').forEach(range => {
 
         const dnaTracker = document.getElementById('dna-tracker');
         dnaTracker.textContent = `${newTotal}% DNA resources used.`;
+
+        // Update test-tube image based on total
+        if (newTotal > 1 && newTotal < 5) {
+            totalImage.src = '../assets/lab-images/test-tube-1.jpg';
+        } else if (newTotal > 4 && newTotal < 35) {
+            totalImage.src = '../assets/lab-images/test-tube-2.jpg';
+        } else if (newTotal > 34 && newTotal < 65) {
+            totalImage.src = '../assets/lab-images/test-tube-3.jpg';
+        } else if (newTotal > 64 && newTotal < 100) {
+            totalImage.src = '../assets/lab-images/test-tube-4.jpg';
+        } else if (newTotal === 100) {
+            totalImage.src = '../assets/lab-images/test-tube-5.jpg';
+        }
     });
 });
 
