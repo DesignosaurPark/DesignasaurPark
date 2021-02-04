@@ -1,0 +1,46 @@
+.outside-area {
+    background-image: url('../assets/t-rex-rain-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+
+.visitor-check-in {
+    display: block;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+
+#visitor-instructions {
+    display: block;
+    justify-content: center;
+    width: 360px;
+    padding: 20px 0 20px 0;
+}
+
+
+#visitor-sign-in {
+    display: block;
+    justify-content: center;
+}
+
+.security-area {
+    display: block;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+
+#security-scanner {
+    display: block;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+
+}
+
+#lab-button {
+    display: block;
+    justify-content: center;
+}
