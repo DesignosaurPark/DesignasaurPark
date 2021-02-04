@@ -57,10 +57,10 @@ export function stackRankTotals(user) {
     if (dinoObject[maxObjectKey] === tRex) {
         dinoBodyArray.push('tRexHead');
     }
-    if (dinoObject[maxObjectKey] === triceratops) {
+    else if (dinoObject[maxObjectKey] === triceratops) {
         dinoBodyArray.push('triceratopsHead');
     }
-    if (dinoObject[maxObjectKey] === pterodactyl) {
+    else if (dinoObject[maxObjectKey] === pterodactyl) {
         dinoBodyArray.push('pterodactylHead');
     }
 
@@ -68,10 +68,10 @@ export function stackRankTotals(user) {
     if (dinoObject[midObjectKey] === tRex) {
         dinoBodyArray.push('tRexTorso');
     }
-    if (dinoObject[midObjectKey] === triceratops) {
+    else if (dinoObject[midObjectKey] === triceratops) {
         dinoBodyArray.push('triceratopsTorso');
     }
-    if (dinoObject[midObjectKey] === pterodactyl) {
+    else if (dinoObject[midObjectKey] === pterodactyl) {
         dinoBodyArray.push('pterodactylTorso');
     }
 
@@ -79,10 +79,10 @@ export function stackRankTotals(user) {
     if (dinoObject[minObjectKey] === tRex) {
         dinoBodyArray.push('tRexLegs');
     }
-    if (dinoObject[minObjectKey] === triceratops) {
+    else if (dinoObject[minObjectKey] === triceratops) {
         dinoBodyArray.push('triceratopsLegs');
     }
-    if (dinoObject[minObjectKey] === pterodactyl) {
+    else if (dinoObject[minObjectKey] === pterodactyl) {
         dinoBodyArray.push('pterodactylLegs');
     }
     console.log(tRex, triceratops, pterodactyl);
