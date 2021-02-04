@@ -5,24 +5,42 @@ main {
     background-size: 100%;
     background-repeat: no-repeat;
     color: white;
+    border: solid 2px var(--color1);
+}
+
+.main-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+    align-items: center;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    }
+
+    section {
+        border: none;
+    }
 
 .about-box {
     justify-content: center;
-
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    justify-items: center;
+    width: 300px;
 }
 
 .bio-pic {
     border: 1px solid black;
     border-radius: 50%;
+    height: 80px;
+    width: auto;
 }
 
 /* #about-sam {
-
 }
 
 #about-cameron {
