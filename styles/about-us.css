@@ -9,16 +9,22 @@ main {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .about-box {
     justify-content: center;
-
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    justify-content: center;
 }
 
 .bio-pic {
     border: 1px solid black;
     border-radius: 50%;
+    height: 80px;
+    width: auto;
 }
 
 /* #about-sam {
