@@ -1,0 +1,99 @@
+.outer-incubation-main {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    background-color: skyblue;
+    background-image: url('../assets/hay-nest-aerial-opaque-cropped.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inner-incubation-content {
+    display: grid;
+    height: 90vh;
+    grid-template-rows: 1fr 9fr 3fr 5fr;
+}
+
+.incubation-title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px 0px 0px 0px;
+    /* border: solid 1px white;
+    border-radius: 10px; */
+}
+
+.incubation-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dino-container {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 3px rgba(28, 92, 22, 0.836); */
+    /* border: solid 5px rgba(28, 92, 22, 0.836);
+    border-radius: 10px; */
+    width: 480px;
+    height: 360px;
+    /* background-color: rgb(235, 207, 152); */
+    /* background-color: rgba(141, 214, 134, 0.836); */
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#species-chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+}
+
+#species-choice {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    background-color: rgba(28, 92, 22, 0.836);
+    color: white;
+}
+
+#species-input {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+.release-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+}
+
+#release-button {
+    border-radius: 5px;
+}
+
+.left-spacing, .right-spacing {
+    width: 200px;
+}
+
+footer {
+    background-color: skyblue;
+}

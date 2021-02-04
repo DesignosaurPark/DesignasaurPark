@@ -31,7 +31,7 @@ document.querySelectorAll('.range-input').forEach(range => {
         triceratopsTotal = dinoRangeTriceratops.value;
         pterodactylTotal = dinoRangePterodactyl.value;
         let newTotal = grabSum(tRexTotal, triceratopsTotal, pterodactylTotal);
-        
+
         const dnaTracker = document.getElementById('dna-tracker');
         dnaTracker.textContent = `${newTotal}% DNA resources used.`;
     });
@@ -57,7 +57,7 @@ incubateButton.addEventListener('click', () => {
     const coordinateTop = getRandomCoordinate();
     const coordinateLeft = getRandomCoordinate();
 
-    
+
     if (!user) {
         const newUser = {
             userName: userName.value,
@@ -65,9 +65,9 @@ incubateButton.addEventListener('click', () => {
                 {
                     dinoId: 0,
                     species: '',
-                    tRexPercent: dinoRangeTRex.value,
-                    triceratopsPercent: dinoRangeTriceratops.value,
-                    pterodactylPercent: dinoRangePterodactyl.value,
+                    tRexPercent: Number(dinoRangeTRex.value),
+                    triceratopsPercent: Number(dinoRangeTriceratops.value),
+                    pterodactylPercent: Number(dinoRangePterodactyl.value),
                     name: dinoName.value,
                     description: '',
                     img: '',
