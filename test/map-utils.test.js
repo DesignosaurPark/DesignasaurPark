@@ -11,6 +11,7 @@ const userTest = {
         {
             dinoId: 1,
             species: 'Raptor',
+            hp: 100,
             tRexPercent: 70,
             triceratopsPercent: 20,
             pterodactylPercent: 10,
@@ -26,7 +27,7 @@ const userTest = {
 test('renderTechnicalInfo should take in a user and an id, and render 4 spans for dino name, species, location and description', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div id="technical-info"><span>Name: Betty </span><span>Species: Raptor </span><span>Coordinates: 35N, 40W </span><span>This is an angry dinosaur.</span></div>`;
+    const expected = `<div id="technical-info"><span>Name: Betty </span><span>Hp: 100</span><span>Species: Raptor </span><span>Coordinates: 35N, 40W </span><span>This is an angry dinosaur.</span></div>`;
 
     //Act 
     // Call the function you're testing and set the result to a const

@@ -1,4 +1,4 @@
-import { renderPosition, renderTechnicalInfo } from './map-utils.js';
+import { renderPosition, renderTechnicalInfo, dinoCollision } from './map-utils.js';
 import { clamp, incrementRandomCoordinate } from '../utils.js';
 import { getUser, setUser } from '../local-storage-utils.js';
 import { stackRankTotals, renderDinosaur } from '../incubation/incubation-utils.js';
@@ -53,6 +53,8 @@ function renderDots() {
             const dino = findByDinoId(element.value, user.dinoArray);
             const rankArray = stackRankTotals(dino);
             const dinoImgElement = renderDinosaur(rankArray);
+            const fightButton = document.createElement('button');
+            fightButton.textContent = 'Fight nearby Dinosaur?';
 
             dinoImgElement.lastChild.textContent = '';
             dinoImgElement.style.transform = 'scale(0.25)';
@@ -65,6 +67,7 @@ function renderDots() {
 
 
             infoAreaContainerDiv.append(technicalInfoDiv, dinoImgElement);
+            if (dinoCollision(dino, user.dinoArray)) infoAreaContainerDiv.append(fightButton);
 
         });
     }
