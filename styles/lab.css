@@ -1,6 +1,6 @@
 body {
     --color1: rgba(28, 92, 22, 0.836);
-    background-image: url('../assets/labBackground.jpg');
+    background-image: url('../assets/lab-images/labBackground.jpg');
     background-repeat: no-repeat;
     /* background-position: center; */
     color: white;
@@ -47,6 +47,8 @@ main {
     grid-row-end: 3;
     justify-self: left;
     align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .dino-in {
@@ -61,13 +63,24 @@ main {
 }
 
 #dna-tracker {
-    justify-content: center;
+    /* text-align: center; */
+    padding-left: 20px;
 }
 
-#dna-graphic {
-    border-radius: 20px;
-    justify-content: end;    
+#total-test-tube {
+    vertical-align:middle;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    flex-basis: 40%;
 }
+
+/* #dna-graphic-container {
+    justify-content: right;    
+}
+#dna-graphic {
+    border: 1px solid black;
+    border-radius: 8px;
+} */
 
 input {
     margin: 10px;
