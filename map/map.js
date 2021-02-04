@@ -25,8 +25,8 @@ advanceDayButton.addEventListener('click', () => {
     infoAreaContainerDiv.textContent = '';
     ul.textContent = '';
     for (const dino of user.dinoArray) {
-        dino.top = clamp((dino.top + incrementRandomCoordinate()), 10, 90);
-        dino.left = clamp((dino.left + incrementRandomCoordinate()), 30, 70);
+        dino.top = clamp((dino.top + incrementRandomCoordinate()), 10, 70);
+        dino.left = clamp((dino.left + incrementRandomCoordinate()), 40, 70);
         renderPosition(dino, ul);
     }
     setUser(user);
