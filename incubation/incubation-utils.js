@@ -53,7 +53,6 @@ export function stackRankTotals(dinoObject) {
     const tRex = dinoObject.tRexPercent;
     const triceratops = dinoObject.triceratopsPercent;
     const pterodactyl = dinoObject.pterodactylPercent;
-    console.log(dinoObject);
     //"if tRex is highest, return tRexHead"
     const maxPercent = Math.max(tRex, triceratops, pterodactyl);
     let maxObjectKey = getKeyByValue(dinoObject, maxPercent);
@@ -98,8 +97,6 @@ export function stackRankTotals(dinoObject) {
     else if (dinoObject[minObjectKey] === pterodactyl) {
         dinoBodyArray.push('pterodactylLegs');
     }
-    console.log(tRex, triceratops, pterodactyl);
-    console.log(minObjectKey, maxObjectKey, midObjectKey);
     return dinoBodyArray;
 }
 

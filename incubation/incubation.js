@@ -9,9 +9,13 @@ const hatchingSpace = document.getElementById('dino-container');
 const eggImg = document.createElement('img');
 const chooseSpecies = document.getElementById('species-choice');
 const namedSpecies = document.getElementById('species-input');
+const speciesChooserBox = document.getElementById('species-chooser');
+const releaseButton = document.getElementById('release-button');
+
 eggImg.style.height = '300px';
 chooseSpecies.style.display = 'none';
 namedSpecies.style.display = 'none';
+speciesChooserBox.style.display = 'none';
 
 let dinoHeadImg = null;
 
@@ -34,6 +38,7 @@ eggImg.addEventListener('click', () => {
 
         chooseSpecies.style.display = 'block';
         namedSpecies.style.display = 'block';
+        speciesChooserBox.style.display = 'flex';
         eggImg.style.display = 'none';
         const dino = user.dinoArray[user.dinoArray.length - 1];
 
@@ -42,15 +47,12 @@ eggImg.addEventListener('click', () => {
         const dinoReveal = renderDinosaur(dinoBodyMix);
         dinoHeadImg = dinoReveal.firstChild.firstChild.src;
         dinoContainer.append(dinoReveal);
+
+        releaseButton.classList.toggle('hidden');
     }
 });
 
-
-
 //set dinos species to user and redirect to map page:
-
-const releaseButton = document.getElementById('release-button');
-
 releaseButton.addEventListener('click', (e) => {
     e.preventDefault();
 
