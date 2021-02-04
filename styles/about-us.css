@@ -1,0 +1,38 @@
+
+main {
+    --color1: rgba(28, 92, 22, 0.836);
+    background-image: url('../assets/jeep.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    justify-content: center;
+
+}
+
+.bio-pic {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+/* #about-sam {
+
+}
+
+#about-cameron {
+
+}
+
+#about-kb {
+    
+}
+
+#about-harold {
+    
+} */
