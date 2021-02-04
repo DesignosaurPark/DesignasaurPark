@@ -47,7 +47,8 @@ main {
     grid-row-end: 3;
     justify-self: left;
     align-items: center;
-    justify-items: space-between;
+    justify-content: center;
+    display: flex;
 }
 
 .dino-in {
@@ -62,17 +63,24 @@ main {
 }
 
 #dna-tracker {
-    justify-content: center;
+    /* text-align: center; */
+    padding-left: 20px;
 }
 
-#dna-graphic-container {
+#total-test-tube {
+    vertical-align:middle;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    flex-basis: 40%;
+}
+
+/* #dna-graphic-container {
     justify-content: right;    
 }
-
 #dna-graphic {
     border: 1px solid black;
-    border-radius: 5px;
-}
+    border-radius: 8px;
+} */
 
 input {
     margin: 10px;
