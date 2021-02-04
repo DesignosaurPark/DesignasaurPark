@@ -19,9 +19,8 @@ const incubateButton = document.getElementById('incubate-button');
 
 // On load, pull in user name for greeting
 getUser();
-const greetingName = user.name;
+const greetingName = user.userName;
 greeting.textContent = `Hello Dr. ${greetingName}`;
-
 
 //On change event for any range input - grab total of 3 %s 
 document.querySelectorAll('.range-input').forEach(range => {

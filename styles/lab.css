@@ -70,7 +70,7 @@ main {
 #total-test-tube {
     vertical-align:middle;
     /* border: 1px solid black; */
-    border-radius: 8px;
+    border-radius: 3px;
     flex-basis: 40%;
 }
 
