@@ -7,6 +7,11 @@
     color: white;
 }
 
+.epic-name {
+    font-size: 1.4em;
+    -webkit-text-stroke:1px red;
+    -webkit-text-fill-color: white;
+}
 
 .visitor-check-in {
     display: block;
@@ -21,10 +26,22 @@
     padding: 20px 0 20px 0;
 }
 
-
 #visitor-sign-in {
     display: block;
     justify-content: center;
+    background-color: rgb(204, 203, 203);
+}
+
+.security-desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: rgb(0, 179, 0);
+    border-radius: 20px;
+    border: 5px solid gray;
+    height: 240px;
 }
 
 .security-area {
