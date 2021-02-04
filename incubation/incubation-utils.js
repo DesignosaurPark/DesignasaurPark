@@ -34,8 +34,7 @@ export function renderDinosaur(dinoPartIdArray) {
 }
 //needs to return just the dinoContainer, not a string/outerHTML
 
-export function stackRankTotals(user) {
-    const dinoObject = user.dinoArray[user.dinoArray.length - 1];
+export function stackRankTotals(dinoObject) {
 
     const tRex = dinoObject.tRexPercent;
     const triceratops = dinoObject.triceratopsPercent;

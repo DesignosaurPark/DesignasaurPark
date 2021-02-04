@@ -34,7 +34,9 @@ eggImg.addEventListener('click', () => {
         chooseSpecies.style.display = 'block';
         namedSpecies.style.display = 'block';
         eggImg.style.display = 'none';
-        const dinoBodyMix = stackRankTotals(user);
+        const dino = user.dinoArray[user.dinoArray.length - 1];
+        
+        const dinoBodyMix = stackRankTotals(dino);
         const dinoContainer = document.getElementById('dino-container');
         const dinoReveal = renderDinosaur(dinoBodyMix);
         dinoHeadImg = dinoReveal.firstChild.src;
