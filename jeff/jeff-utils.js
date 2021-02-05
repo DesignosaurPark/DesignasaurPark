@@ -4,6 +4,6 @@ export function chaosAudit(user) {
     if (universalName === 'Ian' || universalName === 'Malcolm' || universalName === 'Jeff' || universalName === 'Goldblum') {
         window.location = './jeff/index.html';
     } else {
-        window.location = './lab/index.html';
+        window.location = '../lab/index.html';
     }
 }

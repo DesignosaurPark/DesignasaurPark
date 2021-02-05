@@ -1,4 +1,4 @@
-import { chaosAudit } from './jeff/jeff-utils.js';
+//import { chaosAudit } from './jeff/jeff-utils.js';
 import { getUser, setUser } from './local-storage-utils.js';
 
 let user = getUser();
@@ -41,7 +41,6 @@ export function grabAvatarImage() {
 
 securityScan.addEventListener('click', () => {
 
-    //const avatarChoice = document.querySelector('input:checked').value;
     const newAvatar = grabAvatarImage();
 
     if (!user) {
@@ -72,5 +71,5 @@ securityScan.addEventListener('click', () => {
     }
 
     user = getUser(user);
-    chaosAudit(user);
+    window.location = './lab/index.html';
 });
