@@ -40,9 +40,6 @@ test('this grabSum fuction should take 3 numbers in and return their sum', (expe
     expect.equal(actual, expected);
 });
 
-
-
-
 test('this findById fuction takes in an id and an array and returns the corresponding object with that id in the array', (expect) => {
     //Arrange
     const headOptions = [
@@ -82,10 +79,8 @@ test('this findById fuction takes in an id and an array and returns the correspo
     expect.deepEqual(actual, expected);
 });
 
-
-test('this findByDinoId fuction takes in a dinoId and an array and returns the corresponding object with that id in the array', (expect) => {
+test('this findByDinoId function takes in a dinoId and an array and returns the corresponding object with that id in the array', (expect) => {
     //Arrange
-
 
     // Set up your arguments and expectations
     const expected = {
@@ -100,15 +95,11 @@ test('this findByDinoId fuction takes in a dinoId and an array and returns the c
         top: 35,
         left: 40,
     };
-    console.log(userTest.dinoArray);
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = findByDinoId(1, userTest.dinoArray);
-
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
-
-
