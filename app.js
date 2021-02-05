@@ -69,10 +69,11 @@ securityScan.addEventListener('click', () => {
     }
 
     if (user) {
+        user.userName = userNameElement.value;
         setUser(user);
     }
 
-    user = getUser(user);
+    // user = getUser(user);
     chaosAudit(user);
     //document.location.href = './lab/';
 
