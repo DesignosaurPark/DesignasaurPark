@@ -10,6 +10,7 @@ const infoAreaContainerDiv = document.getElementById('info-area-container');
 const userNotesTextarea = document.getElementById('user-notes');
 const advanceDayButton = document.getElementById('advance-day');
 const createAnotherButton = document.getElementById('create-another');
+const galleryButton = document.getElementById('gallery');
 
 userNotesTextarea.placeholder = `Dr.${user.userName}'s notes`;
 infoAreaContainerDiv.style.position = 'relative';
@@ -39,5 +40,9 @@ advanceDayButton.addEventListener('click', () => {
 
 createAnotherButton.addEventListener('click', () =>{
     window.location = '../lab';
+});
+
+galleryButton.addEventListener('click', () => {
+    window.location = '../dino-gallery';
 });
 
