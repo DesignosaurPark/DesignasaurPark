@@ -1,16 +1,31 @@
+/* .home-body {
+
+} */
+
 .outside-area {
+    /* display: flex; */
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(107, 112, 92);
     background-image: url('../assets/t-rex-rain-01.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 40%;
+    width: 100%;
     color: white;
 }
 
-.main-section {
+/* .home-grid-container {
+
+    
+} */
+
+/* .main-section {
     display: flex;
-    /* grid-template-rows: 1fr 5fr; */
-}
+} */
 
 /* #content-area {
     display: flex;
@@ -19,32 +34,68 @@
     align-items: center;
 } */
 
+.home-top-row {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 280px;
+}
+
+.home-intro-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .epic-name {
     font-size: 1.4em;
     -webkit-text-stroke:1px red;
     -webkit-text-fill-color: white;
 }
 
-.user-actions {
+/* .user-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 100%;
+} */
+
+.home-bottom-row {
+    display: grid;
+    align-items: top;
+    grid-template-columns: 50% 50%;
+    height: 100%;
 }
 
+.avatar-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px white; */
+    border-radius: 10px;
+    padding: 4px;
+    margin: 10px;
+    width: 480px;
+    height: 300px;
+}
 
-.avatars {
+/* .avatars {
     display: grid;
     align-items: left;
     width: 360px;
     margin-right: 20vw;
     margin-left: 10vw;
-}
+} */
 
 .avatar-instructions {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding: 10px;
 }
 
 .avatar-chassis {
@@ -62,7 +113,30 @@ input {
 }
 
 input:checked {
-    height: 35px;
+    height: 36px;
+}
+
+.avatars-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.av-image {
+    margin: 4px;
+}
+
+.security-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 10px;
+    width: 480px;
+    height: 300px;
 }
 
 .visitor-check-in {
@@ -77,12 +151,14 @@ input:checked {
     justify-content: center;
     width: 360px;
     padding: 20px 0 20px 0;
+    /* margin: 10px; */
 }
 
 #visitor-sign-in {
     display: block;
     justify-content: center;
     background-color: rgb(204, 203, 203);
+    /* margin: 10px; */
 }
 
 .security-desk {
@@ -94,8 +170,8 @@ input:checked {
     color: rgb(0, 179, 0);
     border-radius: 20px;
     border: 5px solid gray;
-    height: 240px;
-    width: 360px;
+    height: 280px;
+    width: 420px;
     margin-left: 10vw;
     margin-right: 10vw;
     /* position: relative; */
@@ -112,10 +188,18 @@ input:checked {
     display: block;
     justify-content: center;
     padding: 20px 0 20px 0;
-
+    /* margin: 10px; */
 }
 
-#lab-button {
+.lower-spacing {
+    height: 30vh;
+}
+
+/* #lab-button {
     display: block;
     justify-content: center;
-}
+} */
+
+
+
+/* Code from test repo: */

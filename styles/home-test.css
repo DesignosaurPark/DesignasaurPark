@@ -1,0 +1,91 @@
+/* body {
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* main {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+
+} */
+
+/* .s1 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+} */
+
+/* p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+/* .s2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+} */
+
+/* .a2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 10px;
+    width: 360px;
+} */
+
+/* .av-pick {
+    padding: 10px;
+}
+
+.avs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    margin: 4px;
+} */
+
+/* .b2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 10px;
+    width: 360px;
+} */
+
+/* .security-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .instructions {
+    margin: 10px;
+} */
+
+/* .name-space {
+    margin: 10px;
+} */
+
+/* #fingerprint {
+    margin: 10px;
+} */

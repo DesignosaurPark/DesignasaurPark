@@ -19,17 +19,54 @@
         <a href="./about-us/">about us</a>
     </header>
     <main class="outside-area">
-        <section class="main-section" id="content-area">
+        <section class="home-top-row">
+            <p class="home-intro-paragraph">
+            <h3>Welcome to <span class="epic-name">Designasaur Park</span>! Here you can genetically engineer new
+                dinosaurs based on different DNA typeswe have on hand. Well, what are you waiting for?</h3>
+            </p>
+        </section>
+        <section class="home-bottom-row">
+            <nav class="avatar-column">
+                <span class="avatar-instructions">Choose your avatar::: :: :</span>
+                <div class="avatars-set">
+                    <label class="avatar-chassis">
+                        <input type="radio" name="avatar" value="grant">
+                        <img src="./assets/avatars/square-av_alan-grant.png" class="av-image" height="30" />
+                    </label>
+                    <label class="avatar-chassis">
+                        <input type="radio" name="avatar" value="sattler">
+                        <img src="./assets/avatars/square-av_ellie-sattler.png" class="av-image" height="30" />
+                    </label>
+                    <label class="avatar-chassis">
+                        <input type="radio" name="avatar" value="malcolm">
+                        <img src="./assets/avatars/square-av_ian-malcolm.png" class="av-image" height="30" />
+                    </label>
+                </div>
+            </nav>
+
+            <nav class="security-column">
+                <div class="security-desk">
+                    <p id="visitor-instructions"></p>
+                    <nav class="visitor-check-in">
+                        <input type="name" id="visitor-sign-in">
+                    </nav>
+                    <nav class="security-area">
+                        <img src="./assets/fingerprint-scanner.png" id="security-scanner" width="64">
+                    </nav>
+                </div>
+            </nav>
+        </section>
+        <section class="lower-spacing"></section>
+
+
+        <!-- <section class="main-section" id="content-area">
             <p>
             <h3>Welcome to <span class="epic-name">Designasaur Park</span>! Here you can genetically engineer new
-                dinosaurs
-                based on different DNA
-                types
-                we have on hand. Well, what are you waiting for?</h3>
+                dinosaurs based on different DNA typeswe have on hand. Well, what are you waiting for?</h3>
             </p>
             <section class="user-actions">
                 <div class="avatars">
-                    <section class="choice">
+                    <section class="avatar-options">
                         <nav class="avatar-instructions">
                             <p>: :: :::choose your avatar</p>
                         </nav>
@@ -47,7 +84,6 @@
                         </label>
                     </section>
                 </div>
-                <!-- <div class="buffer-zone"></div> -->
                 <div class="security-desk">
                     <nav class="visitor-check-in">
                         <label id="visitor-instructions"></label>
@@ -58,7 +94,8 @@
                     </nav>
                 </div>
             </section>
-        </section>
+        </section> -->
+
     </main>
     <script type="module" src="app.js"></script>
 </body>
