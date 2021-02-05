@@ -7,6 +7,13 @@
     color: white;
 }
 
+#content-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
 .epic-name {
     font-size: 1.4em;
     -webkit-text-stroke:1px red;

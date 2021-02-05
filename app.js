@@ -1,8 +1,8 @@
 import { chaosAudit } from './jeff/jeff-utils.js';
 import { getUser, setUser } from './local-storage-utils.js';
 
-const user = getUser();
-const userName = document.getElementById('visitor-sign-in');
+let user = getUser();
+const userNameElement = document.getElementById('visitor-sign-in');
 
 const securityScan = document.getElementById('security-scanner');
 
@@ -22,19 +22,19 @@ securityInstructions();
 
 
 export function grabAvatarImage() {
-    const avatarChoice = document.querySelector('input:checked').value;
+    const avatarChoice = document.querySelector('input:checked');
 
-    if (avatarChoice === 'grant') {
+    if (avatarChoice.value === 'grant') {
         const selectedAvatar = 'assets/avatars/square-av_alan-grant.png';
         return selectedAvatar;
     }
 
-    if (avatarChoice === 'sattler') {
+    if (avatarChoice.value === 'sattler') {
         const selectedAvatar = 'assets/avatars/square-av_ellie-sattler.png';
         return selectedAvatar;
     }
 
-    if (avatarChoice === 'malcolm') {
+    if (avatarChoice.value === 'malcolm') {
         const selectedAvatar = 'assets/avatars/square-av_ian-malcolm.png';
         return selectedAvatar;
     }
@@ -48,7 +48,7 @@ securityScan.addEventListener('click', () => {
 
     if (!user) {
         const newUser = {
-            userName: userName.value,
+            userName: userNameElement.value,
             userAvatar: newAvatar,
             dinoArray: [
                 {
@@ -72,6 +72,7 @@ securityScan.addEventListener('click', () => {
         setUser(user);
     }
 
+    user = getUser(user);
     chaosAudit(user);
     //document.location.href = './lab/';
 
