@@ -82,6 +82,10 @@ main {
     border-radius: 8px;
 } */
 
+button {
+    background-color: rgb(0, 179, 0);
+}
+
 input {
     margin: 10px;
 }

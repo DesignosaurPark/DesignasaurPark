@@ -26,7 +26,7 @@ const userTest = {
 test('the renderDinosaur function, when given user, return div with dino images and description', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div style="display: flex; flex-direction: column;"><figure style="display: flex; flex-direction: column;"><img src="../assets/tRexHeadImg.png" style="display: flex; flex-direction: column; place-content: center; width: 264px; margin-left: 40vw; margin-right: 40vw;"><img src="../assets/tRexTorsoImg.png" style="display: flex; flex-direction: column; place-content: center; width: 264px; margin-left: 40vw; margin-right: 40vw;"><img src="../assets/tRexLegsImg.png" style="display: flex; flex-direction: column; place-content: center; width: 264px; margin-left: 40vw; margin-right: 40vw;"></figure><p style="width: 100%; text-align: center; font-weight: bold;">Your Dinosaur is an angry fellow. They are a carnivore. They can reach speeds up to 35 mph.</p></div>`;
+    const expected = '<div style="display: flex; flex-direction: column;"><figure style="display: flex; flex-direction: column;"><img src="../assets/tRexHeadImg.png" style="display: flex; flex-direction: column; place-content: center; width: 264px; margin-left: 40vw; margin-right: 40vw;"><img src="../assets/tRexTorsoImg.png" style="display: flex; flex-direction: column; place-content: center; width: 264px; margin-left: 40vw; margin-right: 40vw;"><img src="../assets/tRexLegsImg.png" style="display: flex; flex-direction: column; place-content: center; width: 264px; margin-left: 40vw; margin-right: 40vw;"></figure><p style="width: 100%; text-align: center; font-weight: bold;">Your Dinosaur is an angry fellow. They are a carnivore. They can reach speeds up to 35 mph.</p></div>';
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -37,8 +37,6 @@ test('the renderDinosaur function, when given user, return div with dino images 
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual.outerHTML, expected);
 });
-
-
 
 test('the stackRankTotals function, when given user, return the head, torso and legs ids', (expect) => {
     //Arrange
@@ -57,4 +55,3 @@ test('the stackRankTotals function, when given user, return the head, torso and 
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
-

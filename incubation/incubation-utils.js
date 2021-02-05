@@ -20,8 +20,8 @@ export function renderDinosaur(dinoPartIdArray) {
         dinoImg.src = `../assets/${DinoDataObj.img}`;
         dinoImg.style.display = 'flex';
         dinoImg.style.flexDirection = 'column';
-        dinoImg.style.alignContent = 'center';
-        dinoImg.style.justifyContent = 'center';
+        dinoImg.style.placeContent = 'center';
+        // dinoImg.style.justifyContent = 'center';
         dinoImg.style.width = '264px';
         dinoImg.style.marginLeft = '40vw';
         dinoImg.style.marginRight = '40vw';
@@ -53,7 +53,6 @@ export function stackRankTotals(dinoObject) {
     const tRex = dinoObject.tRexPercent;
     const triceratops = dinoObject.triceratopsPercent;
     const pterodactyl = dinoObject.pterodactylPercent;
-    console.log(dinoObject);
     //"if tRex is highest, return tRexHead"
     const maxPercent = Math.max(tRex, triceratops, pterodactyl);
     let maxObjectKey = getKeyByValue(dinoObject, maxPercent);
@@ -98,8 +97,6 @@ export function stackRankTotals(dinoObject) {
     else if (dinoObject[minObjectKey] === pterodactyl) {
         dinoBodyArray.push('pterodactylLegs');
     }
-    console.log(tRex, triceratops, pterodactyl);
-    console.log(minObjectKey, maxObjectKey, midObjectKey);
     return dinoBodyArray;
 }
 
