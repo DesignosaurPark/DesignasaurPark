@@ -73,7 +73,7 @@ securityScan.addEventListener('click', () => {
         setUser(user);
     }
 
-    // user = getUser(user);
+    user = getUser(user);
     chaosAudit(user);
     //document.location.href = './lab/';
 
