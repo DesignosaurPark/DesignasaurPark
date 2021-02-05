@@ -2,7 +2,6 @@ body {
     --color1: rgba(28, 92, 22, 0.836);
     background-image: url('../assets/lab-images/labBackground.jpg');
     background-repeat: no-repeat;
-    /* background-position: center; */
     color: white;
 }
 
@@ -63,24 +62,14 @@ main {
 }
 
 #dna-tracker {
-    /* text-align: center; */
     padding-left: 20px;
 }
 
 #total-test-tube {
     vertical-align:middle;
-    /* border: 1px solid black; */
     border-radius: 3px;
     flex-basis: 40%;
 }
-
-/* #dna-graphic-container {
-    justify-content: right;    
-}
-#dna-graphic {
-    border: 1px solid black;
-    border-radius: 8px;
-} */
 
 button {
     background-color: rgb(0, 179, 0);

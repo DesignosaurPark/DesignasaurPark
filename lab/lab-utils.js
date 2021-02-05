@@ -6,9 +6,9 @@ function toastFunction() {
 }
 export function compareSliderTotal(currentInput, totalScore) {
     if (totalScore > 100) {
-        // -if total >100%, stepDown last adjusted slider
+// -if total >100%, stepDown last adjusted slider
         currentInput.stepDown(Number(totalScore - 100));
-        // give error toast message
+// give error toast message
         toastFunction();
         const labButton = document.getElementById('incubate-button');
         labButton.classList.toggle('hidden');
