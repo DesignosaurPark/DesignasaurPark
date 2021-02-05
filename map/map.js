@@ -38,7 +38,6 @@ advanceDayButton.addEventListener('click', () => {
     }
     setUser(user);
     renderInfoOnClick(infoAreaContainerDiv, user);
-     
 });
 
 createAnotherButton.addEventListener('click', () =>{
