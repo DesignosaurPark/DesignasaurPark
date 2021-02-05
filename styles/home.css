@@ -3,16 +3,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     color: white;
 }
 
-#content-area {
+.main-section {
+    display: flex;
+    /* grid-template-rows: 1fr 5fr; */
+}
+
+/* #content-area {
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
     align-items: center;
-}
+} */
 
 .epic-name {
     font-size: 1.4em;
@@ -20,14 +25,25 @@
     -webkit-text-fill-color: white;
 }
 
+.user-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+
 .avatars {
-    display: inline;
-    align-items: center;
-    width: 280px;
+    display: grid;
+    align-items: left;
+    width: 360px;
+    margin-right: 20vw;
+    margin-left: 10vw;
 }
 
 .avatar-instructions {
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
 }
 
@@ -45,10 +61,15 @@ input {
     display: none;
 }
 
+input:checked {
+    height: 35px;
+}
+
 .visitor-check-in {
     display: block;
     justify-content: center;
     padding: 20px 0 20px 0;
+    /* position: absolute; */
 }
 
 #visitor-instructions {
@@ -74,12 +95,17 @@ input {
     border-radius: 20px;
     border: 5px solid gray;
     height: 240px;
+    width: 360px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    /* position: relative; */
 }
 
 .security-area {
     display: block;
     justify-content: center;
     padding: 20px 0 20px 0;
+    /* position: absolute; */
 }
 
 #security-scanner {

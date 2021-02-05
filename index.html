@@ -27,34 +27,37 @@
                 types
                 we have on hand. Well, what are you waiting for?</h3>
             </p>
-            <div class="avatars">
-                <nav class="avatar-instructions">
-                    <p>: :: :::choose your avatar</p>
-                </nav>
-                <section class="choice">
-                    <label class="avatar-chassis">
-                        <input type="radio" name="avatar" value="grant">
-                        <img src="./assets/avatars/square-av_alan-grant.png" height="30" />
-                    </label>
-                    <label class="avatar-chassis">
-                        <input type="radio" name="avatar" value="sattler">
-                        <img src="./assets/avatars/square-av_ellie-sattler.png" height="30" />
-                    </label>
-                    <label class="avatar-chassis">
-                        <input type="radio" name="avatar" value="malcolm">
-                        <img src="./assets/avatars/square-av_ian-malcolm.png" width="30" />
-                    </label>
-                </section>
-            </div>
-            <div class="security-desk">
-                <nav class="visitor-check-in">
-                    <label id="visitor-instructions"></label>
-                    <input type="name" id="visitor-sign-in">
-                </nav>
-                <nav class="security-area">
-                    <img src="./assets/fingerprint-scanner.png" id="security-scanner" width="64">
-                </nav>
-            </div>
+            <section class="user-actions">
+                <div class="avatars">
+                    <section class="choice">
+                        <nav class="avatar-instructions">
+                            <p>: :: :::choose your avatar</p>
+                        </nav>
+                        <label class="avatar-chassis">
+                            <input type="radio" name="avatar" value="grant">
+                            <img src="./assets/avatars/square-av_alan-grant.png" height="30" />
+                        </label>
+                        <label class="avatar-chassis">
+                            <input type="radio" name="avatar" value="sattler">
+                            <img src="./assets/avatars/square-av_ellie-sattler.png" height="30" />
+                        </label>
+                        <label class="avatar-chassis">
+                            <input type="radio" name="avatar" value="malcolm">
+                            <img src="./assets/avatars/square-av_ian-malcolm.png" height="30" />
+                        </label>
+                    </section>
+                </div>
+                <!-- <div class="buffer-zone"></div> -->
+                <div class="security-desk">
+                    <nav class="visitor-check-in">
+                        <label id="visitor-instructions"></label>
+                        <input type="name" id="visitor-sign-in">
+                    </nav>
+                    <nav class="security-area">
+                        <img src="./assets/fingerprint-scanner.png" id="security-scanner" width="64">
+                    </nav>
+                </div>
+            </section>
         </section>
     </main>
     <script type="module" src="app.js"></script>
