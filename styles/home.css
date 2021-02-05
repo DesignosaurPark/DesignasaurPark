@@ -3,7 +3,6 @@ body, html {
 }
 
 .outside-area {
-    /* display: flex; */
     display: grid;
     grid-template-rows: .5fr 1fr 1fr;
     justify-content: center;
@@ -17,22 +16,6 @@ body, html {
     width: 100%;
     color: white;
 }
-
-/* .home-grid-container {
-
-    
-} */
-
-/* .main-section {
-    display: flex;
-} */
-
-/* #content-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    align-items: center;
-} */
 
 .home-top-row {
     display: grid;
@@ -57,13 +40,6 @@ body, html {
     -webkit-text-fill-color: white;
 }
 
-/* .user-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    height: 100%;
-} */
-
 .home-bottom-row {
     display: grid;
     align-items: top;
@@ -77,21 +53,12 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: solid 1px white; */
     border-radius: 10px;
     padding: 4px;
     margin: 10px;
     width: 480px;
     height: 300px;
 }
-
-/* .avatars {
-    display: grid;
-    align-items: left;
-    width: 360px;
-    margin-right: 20vw;
-    margin-left: 10vw;
-} */
 
 .avatar-instructions {
     display: flex;
@@ -145,7 +112,6 @@ input:checked {
     display: block;
     justify-content: center;
     padding: 20px 0 20px 0;
-    /* position: absolute; */
 }
 
 #visitor-instructions {
@@ -153,14 +119,12 @@ input:checked {
     justify-content: center;
     width: 360px;
     padding: 20px 0 20px 0;
-    /* margin: 10px; */
 }
 
 #visitor-sign-in {
     display: block;
     justify-content: center;
     background-color: rgb(204, 203, 203);
-    /* margin: 10px; */
 }
 
 .security-desk {
@@ -176,32 +140,20 @@ input:checked {
     width: 420px;
     margin-left: 10vw;
     margin-right: 10vw;
-    /* position: relative; */
 }
 
 .security-area {
     display: block;
     justify-content: center;
     padding: 20px 0 20px 0;
-    /* position: absolute; */
 }
 
 #security-scanner {
     display: block;
     justify-content: center;
     padding: 20px 0 20px 0;
-    /* margin: 10px; */
 }
 
 .lower-spacing {
     height: 30vh;
 }
-
-/* #lab-button {
-    display: block;
-    justify-content: center;
-} */
-
-
-
-/* Code from test repo: */
