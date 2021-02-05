@@ -48,7 +48,7 @@ export function renderTechnicalInfo(user, dinoId) {
 
 export function dinoCollision(clickedDino, dinoArray) {
     for (const comparedDino of dinoArray) {
-        if (comparedDino !== clickedDino){
+        if (comparedDino !== clickedDino && comparedDino.hp > 0 && clickedDino.hp > 0){
             if (isWithinRange(clickedDino.top, comparedDino.top, 8) && isWithinRange(clickedDino.left, comparedDino.left, 8)) return comparedDino;
         }
     }
