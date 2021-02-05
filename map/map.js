@@ -4,7 +4,6 @@ import { getUser, setUser } from '../local-storage-utils.js';
 
 const user = getUser();
 
-// const user = getUser();
 const ul = document.getElementById('map-list');
 const infoAreaContainerDiv = document.getElementById('info-area-container');
 const userNotesTextarea = document.getElementById('user-notes');
