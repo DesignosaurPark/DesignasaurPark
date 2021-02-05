@@ -1,5 +1,5 @@
 import { getUser, setUser } from '../local-storage-utils.js';
-import { grabSum, getRandomCoordinate } from '../utils.js';
+import { grabSum, getRandomCoordinate, clamp } from '../utils.js';
 import { compareSliderTotal } from './lab-utils.js';
 
 const user = getUser();
@@ -75,8 +75,8 @@ dinoRangePterodactyl.addEventListener('change', () => {
 
 // on button click 
 incubateButton.addEventListener('click', () => {
-    const coordinateTop = getRandomCoordinate();
-    const coordinateLeft = getRandomCoordinate();
+    const coordinateTop = clamp(getRandomCoordinate(), 10, 70);
+    const coordinateLeft = clamp(getRandomCoordinate(), 40, 70);
 
     if (!user) {
         const newUser = {

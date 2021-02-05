@@ -1,8 +1,8 @@
 import { chaosAudit } from './jeff/jeff-utils.js';
 import { getUser, setUser } from './local-storage-utils.js';
 
-const user = getUser();
-const userName = document.getElementById('visitor-sign-in');
+let user = getUser();
+const userNameElement = document.getElementById('visitor-sign-in');
 
 const securityScan = document.getElementById('security-scanner');
 
@@ -20,11 +20,36 @@ export function securityInstructions() {
 
 securityInstructions();
 
+
+export function grabAvatarImage() {
+    const avatarChoice = document.querySelector('input:checked');
+
+    if (avatarChoice.value === 'grant') {
+        const selectedAvatar = 'assets/avatars/square-av_alan-grant.png';
+        return selectedAvatar;
+    }
+
+    if (avatarChoice.value === 'sattler') {
+        const selectedAvatar = 'assets/avatars/square-av_ellie-sattler.png';
+        return selectedAvatar;
+    }
+
+    if (avatarChoice.value === 'malcolm') {
+        const selectedAvatar = 'assets/avatars/square-av_ian-malcolm.png';
+        return selectedAvatar;
+    }
+}
+
+
 securityScan.addEventListener('click', () => {
+
+    //const avatarChoice = document.querySelector('input:checked').value;
+    const newAvatar = grabAvatarImage();
 
     if (!user) {
         const newUser = {
-            userName: userName.value,
+            userName: userNameElement.value,
+            userAvatar: newAvatar,
             dinoArray: [
                 {
                     dinoId: 0,
@@ -44,11 +69,16 @@ securityScan.addEventListener('click', () => {
     }
 
     if (user) {
+        user.userName = userNameElement.value;
         setUser(user);
     }
 
+    user = getUser(user);
     chaosAudit(user);
     //document.location.href = './lab/';
 
 });
+
+
+
 
