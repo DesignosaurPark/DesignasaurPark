@@ -64,34 +64,3 @@ releaseButton.addEventListener('click', (e) => {
 
     window.location = '../map/index.html';
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const formData = new FormData(form);
-// const selectionId = formData.get('choices');
-// const choice = findById(selectionId, quest.choices);
-
-// const user = JSON.parse(localStorage.getItem(USER));
-
-// const span = document.getElementById('choice-result');
-// span.textContent = choice.result;
-
-
-// user.health = user.health + choice.health;
-// user.bounty = user.bounty + choice.bounty;
-// user.completed[questId] = true;
-
-// localStorage.setItem('USER', JSON.stringify(user));
