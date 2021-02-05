@@ -1,4 +1,4 @@
-import { renderPosition, renderDots } from './map-utils.js';
+import { renderPosition, renderInfoOnClick } from './map-utils.js';
 import { clamp, incrementRandomCoordinate } from '../utils.js';
 import { getUser, setUser } from '../local-storage-utils.js';
 
@@ -18,7 +18,7 @@ for (const dino of user.dinoArray) {
     renderPosition(dino, ul);
 }
 
-renderDots(infoAreaContainerDiv, user);
+renderInfoOnClick(infoAreaContainerDiv, user);
 
 advanceDayButton.addEventListener('click', () => {
     
@@ -33,7 +33,7 @@ advanceDayButton.addEventListener('click', () => {
         renderPosition(dino, ul);
     }
     setUser(user);
-    renderDots(infoAreaContainerDiv, user);
+    renderInfoOnClick(infoAreaContainerDiv, user);
      
 });
 
