@@ -26,8 +26,6 @@ export function renderDinosaur(dinoPartIdArray) {
         dinoImg.style.marginRight = '40vw';
         dinoPictureBox.style.display = 'flex';
         dinoPictureBox.style.flexDirection = 'column';
-        dinoContainer.style.display = 'flex';
-        dinoContainer.style.flexDirection = 'column';
         dinoPictureBox.append(dinoImg);
         dinoContainer.append(dinoPictureBox);
     }
