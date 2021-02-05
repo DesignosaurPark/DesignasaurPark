@@ -1,51 +1,6 @@
 import data from '../dinoData.js';
 import { findById } from '../utils.js';
 
-export function renderDinosaur(dinoPartIdArray) {
-    // create array to hold our dino data descriptions for each piece
-    let descriptionPieceArr = [];
-
-    const dinoContainer = document.createElement('div');
-    const dinoPictureBox = document.createElement('figure');
-    dinoContainer.style.display = 'flex';
-    dinoContainer.style.flexDirection = 'column';
-    dinoPictureBox.style.display = 'flex';
-    dinoPictureBox.style.flexDirection = 'column';
-
-    // loop through each result id, grab corresponding data obj. push obj.description to description Piece array, create and append img with obj.img as source.
-    for (let id of dinoPartIdArray) {
-        const DinoDataObj = findById(id, data);
-        descriptionPieceArr.push(DinoDataObj.description);
-        const dinoImg = document.createElement('img');
-        dinoImg.src = `../assets/${DinoDataObj.img}`;
-        dinoImg.style.display = 'flex';
-        dinoImg.style.flexDirection = 'column';
-        dinoImg.style.placeContent = 'center';
-        dinoImg.style.width = '264px';
-        dinoImg.style.marginLeft = '40vw';
-        dinoImg.style.marginRight = '40vw';
-        dinoPictureBox.style.display = 'flex';
-        dinoPictureBox.style.flexDirection = 'column';
-        dinoContainer.style.display = 'flex';
-        dinoContainer.style.flexDirection = 'column';
-        dinoPictureBox.append(dinoImg);
-        dinoContainer.append(dinoPictureBox);
-    }
-
-    const dinoDescription = document.createElement('p');
-    dinoDescription.style.width = '100%';
-    dinoDescription.style.textAlign = 'center';
-    dinoDescription.style.fontWeight = 'bold';
-
-    const message = `Your Dinosaur is ${descriptionPieceArr[0]} fellow. They are ${descriptionPieceArr[1]}. They can reach speeds up to ${descriptionPieceArr[2]}.`;
-
-    dinoDescription.textContent = message;
-
-    dinoContainer.append(dinoDescription);
-
-    return dinoContainer;
-}
-//needs to return just the dinoContainer, not a string/outerHTML
 
 export function stackRankTotals(dinoObject) {
 
@@ -99,6 +54,47 @@ export function stackRankTotals(dinoObject) {
     return dinoBodyArray;
 }
 
+export function renderDinosaur(dinoPartIdArray) {
+    // create array to hold our dino data descriptions for each piece
+    let descriptionPieceArr = [];
+
+    const dinoContainer = document.createElement('div');
+    const dinoPictureBox = document.createElement('figure');
+    dinoContainer.style.display = 'flex';
+    dinoContainer.style.flexDirection = 'column';
+    dinoPictureBox.style.display = 'flex';
+    dinoPictureBox.style.flexDirection = 'column';
+
+    // loop through each result id, grab corresponding data obj. push obj.description to description Piece array, create and append img with obj.img as source.
+    for (let id of dinoPartIdArray) {
+        const DinoDataObj = findById(id, data);
+        descriptionPieceArr.push(DinoDataObj.description);
+        const dinoImg = document.createElement('img');
+        dinoImg.src = `../assets/${DinoDataObj.img}`;
+        dinoImg.style.display = 'flex';
+        dinoImg.style.flexDirection = 'column';
+        dinoImg.style.placeContent = 'center';
+        dinoImg.style.width = '264px';
+        dinoImg.style.marginLeft = '40vw';
+        dinoImg.style.marginRight = '40vw';
+        dinoPictureBox.append(dinoImg);
+        dinoContainer.append(dinoPictureBox);
+    }
+
+    const dinoDescription = document.createElement('p');
+    dinoDescription.style.width = '100%';
+    dinoDescription.style.textAlign = 'center';
+    dinoDescription.style.fontWeight = 'bold';
+
+    const message = `Your Dinosaur is ${descriptionPieceArr[0]} fellow. They are ${descriptionPieceArr[1]}. They can reach speeds up to ${descriptionPieceArr[2]}.`;
+
+    dinoDescription.textContent = message;
+
+    dinoContainer.append(dinoDescription);
+
+    return dinoContainer;
+}
+//needs to return just the dinoContainer, not a string/outerHTML
 
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

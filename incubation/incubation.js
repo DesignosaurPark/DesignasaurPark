@@ -1,7 +1,5 @@
-//import { findByDinoId } from '../utils.js';
 import { renderDinosaur, stackRankTotals } from './incubation-utils.js';
 import { getUser, setUser } from '../local-storage-utils.js';
-//import data from '../dinoData.js';
 
 const user = getUser();
 

@@ -21,6 +21,41 @@ export function renderPosition(newestDino, ul) {
     ul.append(dot);
 }
 
+//
+export function renderInfoOnClick(infoAreaContainerDiv, user) {
+    // grab all icon elements
+    const allDots = document.querySelectorAll('#dot');
+    
+    for (let i = 0; i < allDots.length; i++) {
+        const element = allDots[i];
+        //add event listener to each dot
+        element.addEventListener('click', () => {
+            infoAreaContainerDiv.textContent = '';
+    
+            let technicalInfoDiv = renderTechnicalInfo(user, element.value);
+
+            const dino = findByDinoId(element.value, user.dinoArray);
+        
+            const fightButton = document.createElement('button');
+            const fightText = document.createElement('span');
+
+            infoAreaContainerDiv.append(technicalInfoDiv);
+            //check if any dinos are nearby
+            const collisionDino = dinoCollision(dino, user.dinoArray);
+            //if so, add attack button and event listener
+            if (collisionDino && collisionDino.name !== ''){
+                fightButton.textContent = `Attack ${collisionDino.name}?`;
+                fightButton.addEventListener('click', () =>{
+                    // grab fight text and append to info area
+                    fightText.textContent = dinoFight(dino, collisionDino);
+                    infoAreaContainerDiv.append(fightText);
+                });
+                infoAreaContainerDiv.append(fightButton);
+            }
+        });
+    }
+}
+
 export function renderTechnicalInfo(user, dinoId) {
 
     //spans for coordinates, species name, description (4)
@@ -62,6 +97,7 @@ function isWithinRange(value1, value2, range) {
     if (Math.abs(value1 - value2) <= range) return true;
     return false;
 }
+
 // grab both dinos, and move through fight
 export function dinoFight(dino1, dino2) {
     // generate random damage
@@ -90,41 +126,4 @@ export function dinoFight(dino1, dino2) {
     dino2.hp = clamp(dino2.hp, 0, 100);
     dino2.hp = clamp(dino2.hp, 0, 100);
     return message;
-}
-
-//
-export function renderInfoOnClick(infoAreaContainerDiv, user) {
-    // grab all icon elements
-    const allDots = document.querySelectorAll('#dot');
-    
-    for (let i = 0; i < allDots.length; i++) {
-        const element = allDots[i];
-        //add event listener to each dot
-        element.addEventListener('click', () => {
-            infoAreaContainerDiv.textContent = '';
-    
-            let technicalInfoDiv = renderTechnicalInfo(user, element.value);
-
-            const dino = findByDinoId(element.value, user.dinoArray);
-        
-            const fightButton = document.createElement('button');
-            const fightText = document.createElement('span');
-
-            infoAreaContainerDiv.append(technicalInfoDiv);
-            //check if any dinos are nearby
-            const collisionDino = dinoCollision(dino, user.dinoArray);
-            //if so, add attack button and event listener
-            if (collisionDino && collisionDino.name !== ''){
-                fightButton.textContent = `Attack ${collisionDino.name}?`;
-                fightButton.addEventListener('click', () =>{
-                    // grab fight text and append to info area
-                    fightText.textContent = dinoFight(dino, collisionDino);
-                    infoAreaContainerDiv.append(fightText);
-                });
-                infoAreaContainerDiv.append(fightButton);
-            }
-
-        });
-    }
-    
 }
