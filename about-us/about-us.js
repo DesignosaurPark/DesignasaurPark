@@ -6,5 +6,5 @@ goToLabButton.addEventListener('click', () => {
 });
 
 homeButton.addEventListener('click', () => {
-    document.location.href = './index.html';
+    document.location.href = '../index.html';
 });
