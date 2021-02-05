@@ -21,8 +21,15 @@ const incubateButton = document.getElementById('incubate-button');
 // On load, pull in user name and avatar for greeting
 getUser();
 const greetingName = user.userName;
-const avatar = user.
-    greeting.textContent = `Hello Dr. ${greetingName}`;
+const avatar = user.userAvatar;
+greeting.textContent = `Hello Dr. ${greetingName}`;
+const greetingImage = document.createElement('img');
+greetingImage.src = `../${avatar}`;
+greetingImage.style.height = '40px';
+greetingImage.style.marginTop = '5px';
+greetingImage.style.border = 'solid 1px white';
+greetingImage.style.borderRadius = '5px';
+greeting.append(greetingImage);
 
 //On change event for any range input - grab total of 3 %s 
 document.querySelectorAll('.range-input').forEach(range => {
