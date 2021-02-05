@@ -1,5 +1,3 @@
-//import { chaosAudit } from './jeff-utils.js';
-
 let i = 0;
 let text = 'So you decided to name yourself after me? Good, uh, luck with that.';
 const speed = 50;

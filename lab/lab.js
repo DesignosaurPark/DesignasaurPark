@@ -18,10 +18,11 @@ const pterodactylTotalLabel = document.getElementById('dnaPterodactylLabel');
 const totalImage = document.getElementById('total-test-tube');
 const incubateButton = document.getElementById('incubate-button');
 
-// On load, pull in user name for greeting
+// On load, pull in user name and avatar for greeting
 getUser();
 const greetingName = user.userName;
-greeting.textContent = `Hello Dr. ${greetingName}`;
+const avatar = user.
+    greeting.textContent = `Hello Dr. ${greetingName}`;
 
 //On change event for any range input - grab total of 3 %s 
 document.querySelectorAll('.range-input').forEach(range => {
@@ -35,7 +36,7 @@ document.querySelectorAll('.range-input').forEach(range => {
 
         compareSliderTotal(currentRangeInput, combinedTotal);
 
-        //     Show realtime % in feedback display
+//Show realtime total% in feedback display
         tRexTotal = dinoRangeTRex.value;
         triceratopsTotal = dinoRangeTriceratops.value;
         pterodactylTotal = dinoRangePterodactyl.value;
@@ -44,7 +45,7 @@ document.querySelectorAll('.range-input').forEach(range => {
         const dnaTracker = document.getElementById('dna-tracker');
         dnaTracker.textContent = `${newTotal}% DNA resources used.`;
 
-        // Update test-tube image based on total
+// Update test-tube image based on total
         if (newTotal > 1 && newTotal < 5) {
             totalImage.src = '../assets/lab-images/test-tube-1.png';
         } else if (newTotal > 4 && newTotal < 35) {
@@ -59,7 +60,7 @@ document.querySelectorAll('.range-input').forEach(range => {
     });
 });
 
-// on slider change (event listener)
+// on slider change, update text to show dna %
 dinoRangeTRex.addEventListener('change', () => {
     tRexTotalLabel.textContent = `Tyrannosaurus Rex DNA ${dinoRangeTRex.value}%`;
 });
@@ -72,12 +73,10 @@ dinoRangePterodactyl.addEventListener('change', () => {
     pterodactylTotalLabel.textContent = `Pterodactyl DNA ${dinoRangePterodactyl.value}%`;
 });
 
-
-// on button click (event listener)
+// on button click 
 incubateButton.addEventListener('click', () => {
     const coordinateTop = getRandomCoordinate();
     const coordinateLeft = getRandomCoordinate();
-
 
     if (!user) {
         const newUser = {
