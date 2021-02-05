@@ -1,15 +1,5 @@
-// const backAwayButton = document.getElementById('back-to-park');
-
-// backAwayButton.addEventListener('click', () => {
-//     window.location = 
-// });
-
 export function chaosAudit(user) {
-
-    const universalName = user.userName;
-
-    // const nameString = userName.value;
-    // const universalName = nameString.toLowerCase();
+    const universalName = user.userName.toLowerCase();
 
     if (universalName === 'Ian' || universalName === 'Malcolm' || universalName === 'Jeff' || universalName === 'Goldblum') {
         window.location = './jeff/index.html';

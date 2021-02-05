@@ -20,7 +20,6 @@ export function securityInstructions() {
 
 securityInstructions();
 
-
 export function grabAvatarImage() {
     const avatarChoice = document.querySelector('input:checked');
 
@@ -39,7 +38,6 @@ export function grabAvatarImage() {
         return selectedAvatar;
     }
 }
-
 
 securityScan.addEventListener('click', () => {
 
@@ -75,10 +73,4 @@ securityScan.addEventListener('click', () => {
 
     user = getUser(user);
     chaosAudit(user);
-    //document.location.href = './lab/';
-
 });
-
-
-
-
