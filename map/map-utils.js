@@ -1,17 +1,19 @@
 import { clamp, findByDinoId } from '../utils.js';
-import { stackRankTotals, renderDinosaur } from '../incubation/incubation-utils.js';
 
 export function renderPosition(newestDino, ul) {
+    // grab dino coords and ID from local storage
     const dinoTop = newestDino.top;
     const dinoLeft = newestDino.left;
     const dinoId = newestDino.dinoId;
 
+    //create map icon, adjust styling
     const dot = document.createElement('img');
     dot.src = `${newestDino.img}`;
     dot.id = 'dot';
     dot.value = dinoId;
     dot.style.width = '45px';
     dot.style.height = 'auto';
+    //set map position to user storage
     dot.style.top = `${dinoTop}%`;
     dot.style.left = `${dinoLeft}%`;
     dot.style.position = 'absolute';
@@ -32,8 +34,8 @@ export function renderTechnicalInfo(user, dinoId) {
     const dinoCoordinates = document.createElement('span');
     const dinoDescription = document.createElement('span');
 
+    // grab dino by Id, then set spans to dino values
     const dino = findByDinoId(dinoId, user.dinoArray);
-
     dinoName.textContent = `Name: ${dino.name} `;
     dinoHp.textContent = `Hp: ${dino.hp}`;
     dinoDays.textContent = `Days Lived: ${dino.daysLived || 0}`;
@@ -45,7 +47,7 @@ export function renderTechnicalInfo(user, dinoId) {
 
     return div;
 }
-
+// if dinos are within range of eachother and both are alive, return nearby dino
 export function dinoCollision(clickedDino, dinoArray) {
     for (const comparedDino of dinoArray) {
         if (comparedDino !== clickedDino && comparedDino.hp > 0 && clickedDino.hp > 0){
@@ -55,20 +57,23 @@ export function dinoCollision(clickedDino, dinoArray) {
     return null;
 }
 
+// check if two values are within range
 function isWithinRange(value1, value2, range) {
     if (Math.abs(value1 - value2) <= range) return true;
     return false;
 }
-
+// grab both dinos, and move through fight
 export function dinoFight(dino1, dino2) {
+    // generate random damage
     const dino1Damage = Math.ceil(Math.random() * 60);
     const dino2Damage = Math.ceil(Math.random() * 40);
     let message = '';
-   
+   // if both dinos are alive
     if (dino1.hp > 0 && dino2.img !== '../assets/deadDinoHead.png') dino1.hp -= dino2Damage;
     if (dino2.hp > 0 && dino1.img !== '../assets/deadDinoHead.png') dino2.hp -= dino1Damage;
 
     message = `${dino1.name} did ${dino1Damage} damage to ${dino2.name}. They did ${dino2Damage} back`;
+    //check health to see what dino won, change message accordingly
     if (dino1.hp <= 0){
         message = `${dino1.name} was slain by ${dino2.name}`;
         dino1.img = '../assets/deadDinoHead.png';
@@ -87,34 +92,32 @@ export function dinoFight(dino1, dino2) {
     return message;
 }
 
-export function renderDots(infoAreaContainerDiv, user) {
+//
+export function renderInfoOnClick(infoAreaContainerDiv, user) {
+    // grab all icon elements
     const allDots = document.querySelectorAll('#dot');
     
     for (let i = 0; i < allDots.length; i++) {
         const element = allDots[i];
+        //add event listener to each dot
         element.addEventListener('click', () => {
             infoAreaContainerDiv.textContent = '';
     
             let technicalInfoDiv = renderTechnicalInfo(user, element.value);
 
             const dino = findByDinoId(element.value, user.dinoArray);
-            const rankArray = stackRankTotals(dino);
-            const dinoImgElement = renderDinosaur(rankArray);
-
+        
             const fightButton = document.createElement('button');
             const fightText = document.createElement('span');
 
-            dinoImgElement.lastChild.textContent = '';
-            dinoImgElement.style.position = 'absolute';
-            dinoImgElement.style.left = '-113%';
-            dinoImgElement.style.top = '-45%';
-            dinoImgElement.style.transform = 'scale(0.225)';
-
-            infoAreaContainerDiv.append(technicalInfoDiv, dinoImgElement);
+            infoAreaContainerDiv.append(technicalInfoDiv);
+            //check if any dinos are nearby
             const collisionDino = dinoCollision(dino, user.dinoArray);
+            //if so, add attack button and event listener
             if (collisionDino && collisionDino.name !== ''){
                 fightButton.textContent = `Attack ${collisionDino.name}?`;
                 fightButton.addEventListener('click', () =>{
+                    // grab fight text and append to info area
                     fightText.textContent = dinoFight(dino, collisionDino);
                     infoAreaContainerDiv.append(fightText);
                 });
