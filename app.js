@@ -69,6 +69,7 @@ securityScan.addEventListener('click', () => {
     }
 
     if (user) {
+        user.userName = userNameElement.value;
         setUser(user);
     }
 
