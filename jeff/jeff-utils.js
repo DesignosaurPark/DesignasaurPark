@@ -8,7 +8,6 @@ export function chaosAudit(user) {
 
     const universalName = user.userName.toLowerCase();
     // const nameString = userName.value;
-    // console.log(nameString);
     // const universalName = nameString.toLowerCase();
 
     if (universalName === 'ian' || universalName === 'malcolm' || universalName === 'jeff' || universalName === 'goldblum') {
