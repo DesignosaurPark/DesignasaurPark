@@ -1,0 +1,34 @@
+html {
+    background-image: url('../assets/dino-gallery-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    margin: 20vh 0 0 0 ;
+    font-family: 'JurassicPark';
+    
+}
+
+p {
+    background-color: rgb(107, 112, 92);
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+}
+
+.main-section::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+	font-family: 'JurassicPark';
+	src :url('../assets/Jurassic\ Park.ttf');
+	
+}
