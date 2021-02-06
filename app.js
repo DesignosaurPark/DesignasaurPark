@@ -38,9 +38,10 @@ export function grabAvatarImage() {
         return selectedAvatar;
     }
 }
-
 securityScan.addEventListener('click', () => {
-
+    if (userNameElement.value.length === 0) {
+        userNameElement.value = 'Anonymous';
+    }
     const newAvatar = grabAvatarImage();
 
     if (!user) {
