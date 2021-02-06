@@ -22,21 +22,29 @@ securityInstructions();
 
 export function grabAvatarImage() {
     const avatarChoice = document.querySelector('input:checked');
+    const hasSelected = avatarChoice !== null;
 
-    if (avatarChoice.value === 'grant') {
-        const selectedAvatar = 'assets/avatars/square-av_alan-grant.png';
+    if (hasSelected) {
+        if (avatarChoice.value === 'grant') {
+            const selectedAvatar = 'assets/avatars/square-av_alan-grant.png';
+            return selectedAvatar;
+        }
+    
+        if (avatarChoice.value === 'sattler') {
+            const selectedAvatar = 'assets/avatars/square-av_ellie-sattler.png';
+            return selectedAvatar;
+        }
+    
+        if (avatarChoice.value === 'malcolm') {
+            const selectedAvatar = 'assets/avatars/square-av_ian-malcolm.png';
+            return selectedAvatar;
+        }
+    }
+    else {
+        const selectedAvatar = 'assets/deadDinoHead.png';
         return selectedAvatar;
     }
-
-    if (avatarChoice.value === 'sattler') {
-        const selectedAvatar = 'assets/avatars/square-av_ellie-sattler.png';
-        return selectedAvatar;
-    }
-
-    if (avatarChoice.value === 'malcolm') {
-        const selectedAvatar = 'assets/avatars/square-av_ian-malcolm.png';
-        return selectedAvatar;
-    }
+   
 }
 securityScan.addEventListener('click', () => {
     if (userNameElement.value.length === 0) {
