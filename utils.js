@@ -1,5 +1,4 @@
 export function grabSum(numOne, numTwo, numThree) {
-
     let totalPercent = Number(numOne) + Number(numTwo) + Number(numThree);
 
     return totalPercent;
@@ -17,6 +16,8 @@ export function getRandomCoordinate() {
     return Math.ceil(Math.random() * 100);
 }
 
+
+// love this function!
 export function incrementRandomCoordinate() {
     let moveAmount = Math.ceil(Math.random() * 10);
     moveAmount *= (Math.round(Math.random()) === 1) ? 1 : -1;
