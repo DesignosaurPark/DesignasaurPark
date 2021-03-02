@@ -20,32 +20,19 @@ export function securityInstructions() {
 
 securityInstructions();
 
+const avatarMap = {
+    grant: 'assets/avatars/square-av_alan-grant.png',
+    sattler: 'assets/avatars/square-av_ellie-sattler.png',
+    malcolm: 'assets/avatars/square-av_ian-malcolm.png',
+};
+
 export function grabAvatarImage() {
     const avatarChoice = document.querySelector('input:checked');
     const hasSelected = avatarChoice !== null;
 
-    if (hasSelected) {
-        if (avatarChoice.value === 'grant') {
-            const selectedAvatar = 'assets/avatars/square-av_alan-grant.png';
-            return selectedAvatar;
-        }
-    
-        if (avatarChoice.value === 'sattler') {
-            const selectedAvatar = 'assets/avatars/square-av_ellie-sattler.png';
-            return selectedAvatar;
-        }
-    
-        if (avatarChoice.value === 'malcolm') {
-            const selectedAvatar = 'assets/avatars/square-av_ian-malcolm.png';
-            return selectedAvatar;
-        }
-    }
-    else {
-        const selectedAvatar = 'assets/deadDinoHead.png';
-        return selectedAvatar;
-    }
-   
+    return hasSelected ? avatarMap[avatarChoice.value] : 'assets/deadDinoHead.png';
 }
+
 securityScan.addEventListener('click', () => {
     if (userNameElement.value.length === 0) {
         userNameElement.value = 'Anonymous';

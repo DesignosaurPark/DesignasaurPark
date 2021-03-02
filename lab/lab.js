@@ -32,6 +32,7 @@ greetingImage.style.borderRadius = '5px';
 greeting.append(greetingImage);
 
 //On change event for any range input - grab total of 3 %s 
+// nice use of the forEach array method!
 document.querySelectorAll('.range-input').forEach(range => {
     range.addEventListener('change', (e) => {
         let tRexTotal = dinoRangeTRex.value;
@@ -47,23 +48,27 @@ document.querySelectorAll('.range-input').forEach(range => {
         tRexTotal = dinoRangeTRex.value;
         triceratopsTotal = dinoRangeTriceratops.value;
         pterodactylTotal = dinoRangePterodactyl.value;
-        let newTotal = grabSum(tRexTotal, triceratopsTotal, pterodactylTotal);
+        const newTotal = grabSum(tRexTotal, triceratopsTotal, pterodactylTotal);
 
         const dnaTracker = document.getElementById('dna-tracker');
         dnaTracker.textContent = `${newTotal}% DNA resources used.`;
 
+        let tubeNumber = 1;
 // Update test-tube image based on total
+        // i'm staring at this trying to find a better way....but I'm kinda stumped! I guess this is just the way to do it--nice work!
         if (newTotal > 1 && newTotal < 5) {
-            totalImage.src = '../assets/lab-images/test-tube-1.png';
+            tubeNumber = 1;
         } else if (newTotal > 4 && newTotal < 35) {
-            totalImage.src = '../assets/lab-images/test-tube-2.png';
+            tubeNumber = 2;
         } else if (newTotal > 34 && newTotal < 65) {
-            totalImage.src = '../assets/lab-images/test-tube-3.png';
+            tubeNumber = 3;
         } else if (newTotal > 64 && newTotal < 100) {
-            totalImage.src = '../assets/lab-images/test-tube-4.png';
+            tubeNumber = 4;
         } else if (newTotal === 100) {
-            totalImage.src = '../assets/lab-images/test-tube-5.png';
+            tubeNumber = 5;
         }
+
+        totalImage.src = `../assets/lab-images/test-tube-${tubeNumber}.png`;
     });
 });
 
@@ -109,6 +114,7 @@ incubateButton.addEventListener('click', () => {
     }
     if (user) {
         const newDino = {
+            // nice id generations!
             dinoId: user.dinoArray[user.dinoArray.length - 1].dinoId + 1,
             species: '',
             hp: 100,

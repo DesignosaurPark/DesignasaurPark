@@ -85,45 +85,49 @@ export function renderTechnicalInfo(user, dinoId) {
 // if dinos are within range of eachother and both are alive, return nearby dino
 export function dinoCollision(clickedDino, dinoArray) {
     for (const comparedDino of dinoArray) {
-        if (comparedDino !== clickedDino && comparedDino.hp > 0 && clickedDino.hp > 0){
-            if (isWithinRange(clickedDino.top, comparedDino.top, 8) && isWithinRange(clickedDino.left, comparedDino.left, 8)) return comparedDino;
-        }
+        if ((comparedDino !== clickedDino && comparedDino.hp > 0 && clickedDino.hp > 0)
+                && isWithinRange(clickedDino.top, comparedDino.top, 8) 
+                && isWithinRange(clickedDino.left, comparedDino.left, 8)
+        ) return comparedDino;
     }
     return null;
 }
 
 // check if two values are within range
 function isWithinRange(value1, value2, range) {
-    if (Math.abs(value1 - value2) <= range) return true;
-    return false;
+    return Math.abs(value1 - value2) <= range;
 }
+
+const deadDinoHeadUrl = '../assets/deadDinoHead.png';
 
 // grab both dinos, and move through fight
 export function dinoFight(dino1, dino2) {
     // generate random damage
     const dino1Damage = Math.ceil(Math.random() * 60);
     const dino2Damage = Math.ceil(Math.random() * 40);
-    let message = '';
-   // if both dinos are alive
-    if (dino1.hp > 0 && dino2.img !== '../assets/deadDinoHead.png') dino1.hp -= dino2Damage;
-    if (dino2.hp > 0 && dino1.img !== '../assets/deadDinoHead.png') dino2.hp -= dino1Damage;
-
-    message = `${dino1.name} did ${dino1Damage} damage to ${dino2.name}. They did ${dino2Damage} back`;
+    // if both dinos are alive
+    // intereasting way of tracking state by checking the DOM! i'd rather see this state tracked sepoarately in case, for example, the filename changes one day. A bit of a maintainability issue there
+    if (dino1.hp > 0 && dino2.img !== deadDinoHeadUrl) dino1.hp -= dino2Damage;
+    if (dino2.hp > 0 && dino1.img !== deadDinoHeadUrl) dino2.hp -= dino1Damage;
+    
+    let message = `${dino1.name} did ${dino1Damage} damage to ${dino2.name}. They did ${dino2Damage} back`;
     //check health to see what dino won, change message accordingly
     if (dino1.hp <= 0){
         message = `${dino1.name} was slain by ${dino2.name}`;
-        dino1.img = '../assets/deadDinoHead.png';
-    } 
+        dino1.img = deadDinoHeadUrl;
+    }
     if (dino2.hp <= 0){
         message = `${dino2.name} was slain by ${dino1.name}`;
-        dino2.img = '../assets/deadDinoHead.png';
+        dino2.img = deadDinoHeadUrl;
     } 
     if (dino1.hp <= 0 && dino2.hp <= 0) {
         message = `${dino2.name} and ${dino1.name} slayed eachother`;
-        dino2.img = '../assets/deadDinoHead.png';
-        dino1.img = '../assets/deadDinoHead.png';
+        dino2.img = deadDinoHeadUrl;
+        dino1.img = deadDinoHeadUrl;
     }
+
     dino2.hp = clamp(dino2.hp, 0, 100);
-    dino2.hp = clamp(dino2.hp, 0, 100);
+    dino2.hp = clamp(dino2.hp, 0, 100); // does this need to happen twice for some reason?
+
     return message;
 }

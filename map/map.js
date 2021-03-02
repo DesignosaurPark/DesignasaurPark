@@ -11,7 +11,7 @@ const advanceDayButton = document.getElementById('advance-day');
 const createAnotherButton = document.getElementById('create-another');
 const galleryButton = document.getElementById('gallery');
 
-userNotesTextarea.placeholder = `Dr.${user.userName}'s notes`;
+userNotesTextarea.placeholder = `Dr. ${user.userName}'s notes`;
 infoAreaContainerDiv.style.position = 'relative';
 
 // grab each dino and render a dinoIcon to map
@@ -47,4 +47,3 @@ createAnotherButton.addEventListener('click', () =>{
 galleryButton.addEventListener('click', () => {
     window.location = '../dino-gallery';
 });
-
